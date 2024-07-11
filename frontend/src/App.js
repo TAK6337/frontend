@@ -6,22 +6,10 @@ import Login from './components/Login';
 function App() {
   return (
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/Login">Login</Link>
-              </li>
-            </ul>
-          </nav>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Login" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/Login" element={<Login />} />
           </Routes>
-        </div>
       </Router>
   );
 }
