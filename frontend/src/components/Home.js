@@ -142,18 +142,22 @@ function Home() {
                 </div>
             </div>
             <div className="div32">
-                <div className="div33">
+
+
                     <div className="frame-477">
                         <Link to='#' className="div34">서비스소개</Link>
                         <Link to='#' className="div34">수속시간안내</Link>
                         <Link to='#' className="div34">반입물품안내</Link>
                         <Link to='#' className="div34">분실물찾기</Link>
                     </div>
+                    <Link to='/' className="logo-container">
+                        <img src="/images/main_logo.png" alt="Logo" className="logo-img"/>
+                    </Link>
                     <div className="frame-485">
                         <Link to='#' className="div34">분실물등록</Link>
                         <Link to='#' className="div34">택시승강장관리</Link>
                     </div>
-                </div>
+
             </div>
         </div>
 

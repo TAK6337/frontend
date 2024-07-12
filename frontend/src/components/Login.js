@@ -13,7 +13,7 @@ function Login() {
             <div className="full">
 
                 <a href='/'>
-                    <img className="logo" src="logo0.png"/>
+                    <img className="logo" src="/images/main_logo.png"/>
                 </a>
                 <div className="login-main">
                     <div className="sign-in-2">Login</div>

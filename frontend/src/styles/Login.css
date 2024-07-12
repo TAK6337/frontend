@@ -4,10 +4,13 @@
 }
 .login-page {
     background: #ffffff;
-    padding: 10px;
-    height: 1080px;
+    width: 1000px; /* 고정된 너비 지정 */
+    min-height: 1200px;
+    padding-bottom: 50px; /* 아래쪽 패딩 추가 */
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin: 0 auto; /* 중앙 정렬 */
 }
 .full {
     display: flex;
@@ -23,12 +26,10 @@
 }
 .logo {
     flex-shrink: 0;
-    width: 330px;
-    height: 42px;
+    width: 330px; /* 이미지의 너비를 조정 */
+    height: auto; /* 높이를 자동으로 조정 */
     position: relative;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    object-fit: cover;
+    object-fit: contain; /* 이미지가 짤리지 않도록 설정 */
 }
 .login-main {
     border-radius: 20px;
