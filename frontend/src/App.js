@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import PrivacyAgreement from './components/PrivacyAgreement';
+// import ServiceIntro from "./components/ServiceIntro";
 
 function App() {
     const [agreed, setAgreed] = useState(false);
@@ -14,6 +15,7 @@ function App() {
               <Route path="/Login" element={<Login />} />
               <Route path="/signup" element={<Signup agreed={agreed} />} />
               <Route path="/PrivacyAgreement" element={<PrivacyAgreement setAgreed={setAgreed} />} />
+              {/*<Route path="/ServiceIntro" element={<ServiceIntro/>} />*/}
           </Routes>
       </Router>
   );

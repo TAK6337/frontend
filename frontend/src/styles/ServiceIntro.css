@@ -1,0 +1,317 @@
+.div,
+.div * {
+    box-sizing: border-box;
+}
+.div {
+    background: #ffffff;
+    height: 1226px;
+    position: relative;
+    overflow: hidden;
+}
+.frame-646 {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 980px;
+    position: absolute;
+    left: 470px;
+    top: 160px;
+}
+.frame-645 {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.div2 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 686px;
+    position: relative;
+}
+.target {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-DisplayRegular", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+.ai-ai {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-DisplayExtraLight", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+.line-5 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px 0 0 0;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 0px;
+    position: relative;
+}
+.frame-644 {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 852px;
+    position: relative;
+}
+.frame-495 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 686px;
+    position: relative;
+}
+.service {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-DisplayRegular", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+.div3 {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-DisplayExtraLight", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+.frame-493 {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.frame-492 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 852px;
+    position: relative;
+}
+.div4 {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+.frame-489 {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.frame-488 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.icn-1-1 {
+    flex-shrink: 0;
+    width: 101px;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+.div5 {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+}
+.we-keep-your-web-build-online-24-x-7-x-365-downtime-not-only-costs-you-lost-visitors-but-also-damages-your-reputation-and-search-engine-rankings {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    position: relative;
+    width: 252px;
+}
+.uptime {
+    flex-shrink: 0;
+    width: 252px;
+    height: 207px;
+    position: static;
+}
+.frame-4882 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 300px;
+    top: 0px;
+}
+.icn-1-12 {
+    flex-shrink: 0;
+    width: 101px;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+.frame-4883 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 600px;
+    top: 0px;
+}
+.icn-1-13 {
+    flex-shrink: 0;
+    width: 101px;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+.frame-491 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 552px;
+    position: relative;
+}
+.frame-490 {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.frame-4892 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.icn-1-14 {
+    flex-shrink: 0;
+    width: 101px;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+.icn-1-15 {
+    flex-shrink: 0;
+    width: 101px;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+.div6 {
+    background: #ffffff;
+    width: 1920px;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+.div7 {
+    width: 1400px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 700px);
+    top: calc(50% - 40px);
+    overflow: hidden;
+}
+.frame-477 {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0px;
+    top: calc(50% - 10px);
+}
+.div8 {
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+.frame-485 {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 10px);
+}
+.frame-538 {
+    width: 170px;
+    height: 60px;
+    position: absolute;
+    left: calc(50% - 85px);
+    top: calc(50% - 30px);
+    overflow: hidden;
+    object-fit: cover;
+}

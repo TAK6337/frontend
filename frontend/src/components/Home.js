@@ -1,165 +1,358 @@
 // src/components/Home.js
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+const getRandomNumber = () => {
+    return Math.floor(Math.random() * 60) + 1; // Generates a random number between 1 and 60
+};
 function Home() {
+    const [timeDigit, setTimeDigit] = useState(45)
+    const [timeDigit1, setTimeDigit1] = useState(7);
+    const [timeDigit2, setTimeDigit2] = useState(13);
+    const [timeDigit3, setTimeDigit3] = useState(20);
+    const [timeDigit4, setTimeDigit4] = useState(7);
+    const [timeDigit5, setTimeDigit5] = useState(20);
+
+
+    const handleRefreshClick = () => {
+        // 새로운 숫자를 랜덤으로 생성하거나, 기존 숫자에 변화를 주는 로직을 구현
+        setTimeDigit(getRandomNumber());
+        setTimeDigit1(getRandomNumber());
+        setTimeDigit2(getRandomNumber());
+        setTimeDigit3(getRandomNumber());
+        setTimeDigit4(getRandomNumber());
+        setTimeDigit5(getRandomNumber());
+
+    };
+
     return (
         <div className="div">
-            <div className="div2">
-                <div className="div3">
-                    <div className="div4">
-                        <div className="div5">
-                            <div className="div6">로그인</div>
-                            <div className="div7">
-                                <div className="frame-476">
-                                    <div className="div8">직원기능 사용에는 로그인이 필요합니다</div>
-                                    <Link to='/Login' className="div9">
-                                        <div className="ai">AI서비스 로그인</div>
-                                    </Link>
-                                    <div className="frame-475">
-                                        <Link to='#' className="div10">아이디찾기</Link>
-                                        <div className="rectangle-4169"></div>
-                                        <Link to ='#' className="div10">비밀번호찾기</Link>
-                                        <div className="rectangle-4168"></div>
-                                        <Link to ='/Signup' className="div10">회원가입</Link>
+            <div className="navi">
+                <div className="left-side">
+                    <Link to='/' className="left-side-text">서비스소개</Link>
+                    <Link to='/' className="left-side-text">수속시간안내</Link>
+                    <Link to='/' className="left-side-text">반입물품안내</Link>
+                    <Link to='/' className="left-side-text">분실물찾기</Link>
+                </div>
+                <a href='/' className='main-logo'>
+                    <img src="/images/main_logo.png" alt="logo"/>
+                </a>
+                <div className="right-side">
+                    <Link to='/' className="right-side-text">분실물등록</Link>
+                    <Link to='/' className="right-side-text">택시승강장관리</Link>
+                    <a href='/Login' className="right-side-text">로그인</a>
+                </div>
+            </div>
+
+            <div className="content">
+
+                <div className="primary-content">
+                    <div className="primary-content-main">
+                        <div className="primary-content-description">
+                            <div className="primary-content-title">
+                                <div className="primary-content-title-main">공항도착 권장시간</div>
+                                <div className="primary-content-title-sub">
+                                    권장시간 전에 공항에 도착하시면 여유롭게 비행기 탑승이 가능합니다
+                                </div>
+                            </div>
+                            <div className="primary-content-time">
+                                <div className="primary-content-time-digit">{timeDigit}</div>
+                                <div className="primary-content-time-text">분</div>
+                            </div>
+                        </div>
+                        <div className="primary-content-process">
+                            <div className="process-util">
+                                <div className="process-name">
+                                    <div className="process-name-text">탑승수속 과정</div>
+                                </div>
+                                <button className="refresh-btn" onClick={handleRefreshClick}>
+                                    <img className="refresh" src="/images/refresh.png"/>
+                                </button>
+                            </div>
+                            <div className="process-images">
+                                <div className="process-1">
+                                    <div className="process-info">
+                                        <div className="pr-info">
+                                            <img className="car-front" src="/images/main_car.png"/>
+                                            <div className="frame-595">
+                                                <div className="div2">평균</div>
+                                                <div className="_7">{timeDigit1}분</div>
+                                            </div>
+                                        </div>
+                                        <div className="pr-name">
+                                            <div className="div6">공항도착(주차)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="process-2">
+                                    <div className="process-info2">
+                                        <div className="pr-info2">
+                                            <img className="user-check-01" src="/images/user_check.png"/>
+                                        </div>
+                                        <div className="pr-name2">
+                                            <div className="div6">셀프 체크인</div>
+                                        </div>
+                                    </div>
+                                    <div className="process-info2">
+                                        <div className="pr-info3">
+                                            <img className="luggage-01" src="/images/main_luggage.png"/>
+                                        </div>
+                                        <div className="pr-name3">
+                                            <div className="div6">수하물위탁</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="process-3">
+                                    <div className="process-info2">
+                                        <div className="pr-info2">
+                                            <img className="group-account" src="/images/main_account.png"/>
+                                        </div>
+                                        <div className="pr-name4">
+                                            <div className="div6">신분확인</div>
+                                        </div>
+                                    </div>
+                                    <div className="process-info2">
+                                        <div className="pr-info4">
+                                            <img className="police" src="/images/police.png"/>
+                                        </div>
+                                        <div className="pr-name5">
+                                            <div className="div6">보안검색</div>
+                                        </div>
+                                    </div>
+                                    <div className="process-info2">
+                                        <div className="pr-info3">
+                                            <img className="passport" src="/images/passport.png"/>
+                                        </div>
+                                        <div className="pr-name6">
+                                            <div className="div6">탑승시간</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="process-4">
+                                    <div className="process-info2">
+                                        <div className="pr-info">
+                                            <img className="departure" src="/images/airplane.png"/>
+                                            <div className="frame-595">
+                                                <div className="div2">평균</div>
+                                                <div className="_20">{timeDigit5}분</div>
+                                            </div>
+                                        </div>
+                                        <div className="pr-name7">
+                                            <div className="div6">출발</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="div5">
-                            <div className="div6">직원기능</div>
-                            <div className="div7">
-                                <div className="frame-482">
-                                    <Link to ='#' className="div11">
-                                        <div className="frame-479">
-                                            <img className="luggage-02" src="/images/main_luggage.png"/>
-                                            <div className="div12">분실물 간편등록</div>
-                                        </div>
-                                    </Link>
-                                    <Link to ='#' className="div11">
-                                        <div className="frame-480">
-                                            <img className="car-01" src="/images/main_car.png"/>
-                                            <div className="div12">택시승강장 관리</div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div className="div13">
-                        <div className="div14">
-                            <div className="div15">뉴스 · 공지사항</div>
-                            <img className="chevron-right" src="chevron-right0.svg"/>
+                    <div className="time-3">
+                        <div className="time-text">{timeDigit2}분</div>
+                    </div>
+                    <div className="time-2">
+                        <div className="time-text">{timeDigit3}분</div>
+                    </div>
+                    <div className="time-1">
+                        <div className="time-text">{timeDigit4}분</div>
+                    </div>
+                </div>
+                <div className="sub-content-1">
+                    <div className="sub-content-1-description">
+                        <div className="sub-content-1-rect"></div>
+                        <div className="sub-content-1-text">승객분들께서 많이 찾으시는 서비스</div>
+                    </div>
+                    <div className="sub-content-1-main">
+                        <div className="sub-content-1-line">
+                            <Link to ='/' className="sub-content-1-container">
+                                <div className="sub-content-1-container-description">
+                                    <div className="sub-content-1-container-text-1">서비스소개</div>
+                                    <div className="sub-content-1-container-right">
+                                        <div className="sub-content-1-container-image"></div>
+                                        <div className="arrow-box">
+                                            <img
+                                                className="arrow-narrow-right"
+                                                src="/images/arrow_narrow_right.png"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                            <Link to ='/' className="sub-content-1-container">
+                                <div className="sub-content-1-container-description">
+                                    <div className="sub-content-1-container-text-2">수속시간안내</div>
+                                    <div className="sub-content-1-container-right">
+                                        <div className="sub-content-1-container-image"></div>
+                                        <div className="arrow-box">
+                                            <img
+                                                className="arrow-narrow-right2"
+                                                src="/images/arrow_narrow_right.png"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
-                        <div className="frame-483">
-                            <div className="div16">[단독] 동북아 허브 꿈꾼다…대구공항...</div>
-                            <div className="div16">대구시, TK 신공항 부지 이주민 지원...</div>
-                            <div className="div16">“대구경북 미래100년 신공항 제대로...</div>
-                            <div className="div16">대구공항 국내선 신(新) 여객터미널...</div>
-                            <div className="div16">대구공항 국내선 새 여객터미널 개관식...</div>
+                        <div className="sub-content-1-line">
+                            <Link to ='/' className="sub-content-1-container">
+                                <div className="sub-content-1-container-description">
+                                    <div className="sub-content-1-container-text-3">반입물품안내</div>
+                                    <div className="sub-content-1-container-right">
+                                        <div className="sub-content-1-container-image"></div>
+                                        <div className="arrow-box">
+                                            <img
+                                                className="arrow-narrow-right3"
+                                                src="/images/arrow_narrow_right.png"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                            <Link to ='/' className="sub-content-1-container">
+                                <div className="sub-content-1-container-description">
+                                    <div className="sub-content-1-container-text-4">분실물찾기</div>
+                                    <div className="sub-content-1-container-right">
+                                        <div className="sub-content-1-container-image"></div>
+                                        <div className="arrow-box">
+                                            <img
+                                                className="arrow-narrow-right4"
+                                                src="/images/arrow_narrow_right.png"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
-                <div className="div18">
-                    <div className="div19">
-                        <div className="div20">
-                            <Link to='#' className="div21">
-                                <div className="div22">
-                                    <div className="div23">분실물 찾기</div>
+                <div className="sub-content-2">
+                    <div className="sub-content-2-main">
+                        <div className="sub-content-2-rect"></div>
+                        <div className="sub-content-2-text">대구공항 소식</div>
+                    </div>
+                    <div className="sub-content-2-container">
+                        <div className="sub-content-2-container-description">
+                            <div className="sub-content-2-container-description-top">
+                                <div className="sub-content-2-container-description-top-container">
+                                    <div className="article">
+                                        <div className="article-top">
+                                            <div className="article-top-left">
+                                                <div className="bell-box">
+                                                    <img className="bell" src="/images/bell.png"/>
+                                                </div>
+                                                <div className="broad-text-box">
+                                                    <div className="broad-text">보도자료</div>
+                                                </div>
+                                                <div className="sub-container-2-date">2024.07.15</div>
+                                            </div>
+                                            <img className="dots-vertical" src="/images/dots-vertical.png"/>
+                                        </div>
+                                        <div className="article-title">
+                                            [단독] 동북아 허브 꿈꾼다…대구공항,
+                                            <br/>
+                                            환승시설 구축 추진
+                                        </div>
+                                    </div>
                                 </div>
-                            </Link>
-                            <Link to='#' className="frame-473">
-                                <div className="div22">
-                                    <div className="div23">반입물품확인</div>
-                                </div>
-                            </Link>
-                            <Link to='#' className="frame-474">
-                                <div className="div22">
-                                    <div className="div23">여행지날씨</div>
-                                </div>
-                            </Link>
-                        </div>
-                        <div className="div24">
-                            <div className="div25">고객서비스</div>
-                            <div className="div26">
-                                공항 내 분실물을 한눈에 확인하고
-                                <br/>
-                                물품에 대한 기내 반입 가능 여부를
-                                <br/>
-                                쳇봇에게 물어보세요
                             </div>
+                            <img
+                                className="sub-content-2-container-description-image"
+                                src="/images/article_image(temp).png"
+                            />
+                        </div>
+                        <div className="sub-content-2-container-description">
+                            <div className="sub-content-2-container-description-top">
+                                <div className="sub-content-2-container-description-top-container">
+                                    <div className="article">
+                                        <div className="article-top">
+                                            <div className="article-top-left">
+                                                <div className="bell-box">
+                                                    <img className="bell2" src="/images/bell.png"/>
+                                                </div>
+                                                <div className="broad-text-box">
+                                                    <div className="broad-text">보도자료</div>
+                                                </div>
+                                                <div className="sub-container-2-date">2024.07.15</div>
+                                            </div>
+                                            <img className="dots-vertical2" src="/images/dots-vertical.png"/>
+                                        </div>
+                                        <div className="article-title">
+                                            [단독] 동북아 허브 꿈꾼다…대구공항,
+                                            <br/>
+                                            환승시설 구축 추진
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img
+                                className="sub-content-2-container-description-image"
+                                src="/images/article_image(temp).png"
+                            />
+                        </div>
+                        <div className="sub-content-2-container-description">
+                            <div className="sub-content-2-container-description-top">
+                                <div className="sub-content-2-container-description-top-container">
+                                    <div className="article">
+                                        <div className="article-top">
+                                            <div className="article-top-left">
+                                                <div className="bell-box">
+                                                    <img className="bell3" src="/images/bell.png"/>
+                                                </div>
+                                                <div className="broad-text-box">
+                                                    <div className="broad-text">보도자료</div>
+                                                </div>
+                                                <div className="sub-container-2-date">2024.07.15</div>
+                                            </div>
+                                            <img className="dots-vertical3" src="/images/dots-vertical.png"/>
+                                        </div>
+                                        <div className="article-title">
+                                            [단독] 동북아 허브 꿈꾼다…대구공항,
+                                            <br/>
+                                            환승시설 구축 추진
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img
+                                className="sub-content-2-container-description-image"
+                                src="/images/article_image(temp).png"
+                            />
                         </div>
                     </div>
-                    <img className="div27" src="/images/main_divider.png"/>
-                    <div className="div28">
-                        <div className="div28">
-                            <div className="div29">
-                                <div className="frame-470">
-                                    <div className="frame-468">
-                                        <div className="frame-4702">
-                                            <div className="div30">
-                                                탑승수속
-                                                <br/>
-                                                소요시간 안내
-                                            </div>
-                                            <div className="_44">
-                                                <span>
-                                                  <span className="_44-span">44</span>
-                                                  <span className="_44-span2">분</span>
-                                                </span>
-                                            </div>
-                                            <Link to = '#' className="frame-484">
-                                                <div className="div31">자세히 보기</div>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="frame-469">
-                                        <div className="frame-471">
-                                            <div className="div30">체크인</div>
-                                            <div className="_15">
-                    <span>
-                      <span className="_15-span">15</span>
-                      <span className="_15-span2">분</span>
-                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="frame-4682">
-                                        <div className="frame-4703">
-                                            <div className="div30">보안절차</div>
-                                            <div className="_7">
-                    <span>
-                      <span className="_7-span">7</span>
-                      <span className="_7-span2">분</span>
-                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div className="sub-content-2-bottom">
+                        <div className="sub-content-2-box">
+                            <div className="sub-content-2-description">
+                                <div className="sub-content-2-text2">전체뉴스</div>
+                                <Link to ='/' className="sub-content-2-link">
+                                    <div className="sub-content-2-link-text">바로가기</div>
+                                    <img className="arrow-narrow-right5" src="/images/arrow-narrow-right(black).png"/>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="sub-content-2-box">
+                            <div className="sub-content-2-description">
+                                <div className="sub-content-2-text2">보도자료</div>
+                                <Link to ='/' className="sub-content-2-link">
+                                    <div className="sub-content-2-link-text">바로가기</div>
+                                    <img className="arrow-narrow-right6" src="/images/arrow-narrow-right(black).png"/>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="sub-content-2-box">
+                            <div className="sub-content-2-description">
+                                <div className="sub-content-2-text2">참고자료</div>
+                                <Link to ='/' className="sub-content-2-link">
+                                    <div className="sub-content-2-link-text">바로가기</div>
+                                    <img className="arrow-narrow-right7" src="/images/arrow-narrow-right(black).png"/>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="div32">
-
-
-                    <div className="frame-477">
-                        <Link to='#' className="div34">서비스소개</Link>
-                        <Link to='#' className="div34">수속시간안내</Link>
-                        <Link to='#' className="div34">반입물품안내</Link>
-                        <Link to='#' className="div34">분실물찾기</Link>
-                    </div>
-                    <Link to='/' className="logo-container">
-                        <img src="/images/main_logo.png" alt="Logo" className="logo-img"/>
-                    </Link>
-                    <div className="frame-485">
-                        <Link to='#' className="div34">분실물등록</Link>
-                        <Link to='#' className="div34">택시승강장관리</Link>
-                    </div>
-
+            <div className="footer">
+                <div className="footer-content"></div>
             </div>
         </div>
+
 
     );
 }
