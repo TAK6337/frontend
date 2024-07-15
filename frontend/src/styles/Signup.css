@@ -103,7 +103,27 @@
     margin-top: -5px; /* 위쪽 간격 조정 */
 }
 
+/*.signup-button {*/
+/*    background-color: #3f51b5;*/
+/*    color: white;*/
+/*    padding: 15px;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*    margin-top: 20px;*/
+/*    margin-bottom: 8px;*/
+/*    font-size: 16px;*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*}*/
+
+.signup-button:hover {
+    background-color: #0056b3;
+}
+
 .signup-button {
+    position: relative;
+    display: inline-block;
     background-color: #3f51b5;
     color: white;
     padding: 15px;
@@ -112,26 +132,40 @@
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 8px;
-
     font-size: 16px;
-    position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
-.signup-button:hover {
-    background-color: #0056b3;
-}
-
-.signup-button::after {
-    color: rgba(255, 255, 255, 0.3);
+.signup-button::before {
+    content: "I love Aivle School You love Aivle School We love Aivle School";
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 20px;
     white-space: nowrap;
-    font-size: 12px;
+    overflow: hidden;
     z-index: 1;
-    padding: 2px 8px;
+    pointer-events: none;
+    animation: scroll-text 7s linear infinite;
+    /*transform: rotate(-4deg); !* Rotate text *!*/
+}
+
+.signup-button span {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes scroll-text {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
 }
 
 .gender-container {

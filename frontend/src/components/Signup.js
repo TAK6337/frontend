@@ -208,7 +208,7 @@ const Signup = ({ agreed }) => {
                         />
                     </div>
 
-                    <button type="submit" className="signup-button">회원가입</button>
+                    <button type="submit" className="signup-button"><span>회원가입</span></button>
                 </form>
             </div>
         </div>
