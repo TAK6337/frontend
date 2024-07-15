@@ -42,19 +42,19 @@ const Signup = ({ agreed }) => {
 
     return (
         <div className="signup-container">
-            <h1 className="signup-title">Signup</h1>
+            <h1 className="signup-title">회원가입</h1>
             <form className="signup-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <i className="fas fa-user" />
-                    <input type="text" placeholder="Enter your ID/Email" className="signup-input" />
-                    <button type="button" className="availability-button">Check Availability</button>
+                    <input type="text" placeholder="아이디/이메일 입력" className="signup-input" />
+                    <button type="button" className="availability-button">중복확인</button>
                 </div>
 
                 <div className="form-group">
                     <i className="fas fa-lock" />
                     <input
                         type={showPassword1 ? "text" : "password"}
-                        placeholder="Enter your password"
+                        placeholder="비밀번호 입력"
                         className="signup-input"
                         value={password1}
                         onChange={(e) => setPassword1(e.target.value)}
@@ -72,7 +72,7 @@ const Signup = ({ agreed }) => {
                     <i className="fas fa-lock" />
                     <input
                         type={showPassword2 ? "text" : "password"}
-                        placeholder="Check your password"
+                        placeholder="비밀번호 확인"
                         className="signup-input"
                         value={password2}
                         onChange={(e) => setPassword2(e.target.value)}
@@ -90,16 +90,16 @@ const Signup = ({ agreed }) => {
 
                 <div className="form-group">
                     <i className="fas fa-user" />
-                    <input type="text" placeholder="Enter your name" className="signup-input" />
+                    <input type="text" placeholder="성명 입력" className="signup-input" />
                 </div>
 
                 <div className="form-group">
                     <i className="fas fa-phone" />
-                    <input type="text" placeholder="Enter your phone number" className="signup-input" />
+                    <input type="text" placeholder="전화번호 입력" className="signup-input" />
                 </div>
 
 
-                <button type="submit" className="signup-button">Signup</button>
+                <button type="submit" className="signup-button">회원가입</button>
             </form>
         </div>
     );
