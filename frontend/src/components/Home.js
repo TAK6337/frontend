@@ -49,8 +49,8 @@ function Home() {
         <div className="home-div">
             <div className="home-navi">
                 <div className="home-left-side">
-                    <Link to='/' className="home-left-side-text">서비스소개</Link>
-                    <Link to='/' className="home-left-side-text">수속시간안내</Link>
+                    <Link to='/ServiceIntro' className="home-left-side-text">서비스소개</Link>
+                    <Link to='/Time' className="home-left-side-text">수속시간안내</Link>
                     <Link to='/' className="home-left-side-text">반입물품안내</Link>
                     <Link to='/' className="home-left-side-text">분실물찾기</Link>
                 </div>
@@ -182,7 +182,7 @@ function Home() {
                     </div>
                     <div className="home-sub-content-1-main">
                         <div className="home-sub-content-1-line">
-                            <Link to ='/' className="home-sub-content-1-container">
+                            <a href ='/ServiceIntro' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
                                     <div className="home-sub-content-1-container-text-1">서비스소개</div>
                                     <div className="home-sub-content-1-container-right">
@@ -195,8 +195,8 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
-                            <Link to ='/' className="home-sub-content-1-container">
+                            </a>
+                            <Link to ='/Time' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
                                     <div className="home-sub-content-1-container-text-2">수속시간안내</div>
                                     <div className="home-sub-content-1-container-right">

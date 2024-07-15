@@ -1,97 +1,98 @@
 import React from 'react';
 import '../styles/ServiceIntro.css';
+import {Link} from "react-router-dom";
 
 function ServiceIntro(){
     return(
-        <div className="div">
-            <div className="frame-646">
-                <div className="frame-645">
-                    <div className="div2">
-                        <div className="target">Target</div>
-                        <div className="ai-ai">
-                            &#039;반반백조&#039;의 프로젝트는 &#039;대구 신공항&#039;에 AI 기술을
-                            도입하여 스마트공항으로의 발전을 도모하고 있습니다.
+        <div className="serviceintro-div">
+            <div className="home-navi">
+                <div className="home-left-side">
+                    <Link to='/ServiceIntro' className="home-left-side-text">서비스소개</Link>
+                    <Link to='/Time' className="home-left-side-text">수속시간안내</Link>
+                    <Link to='/' className="home-left-side-text">반입물품안내</Link>
+                    <Link to='/' className="home-left-side-text">분실물찾기</Link>
+                </div>
+                <a href='/' className='main-logo'>
+                    <img src="/images/main_logo.png" alt="logo"/>
+                </a>
+                <div className="home-right-side">
+                    <Link to='/' className="home-right-side-text">분실물등록</Link>
+                    <Link to='/' className="home-right-side-text">택시승강장관리</Link>
+                    <a href='/Login' className="home-right-side-text">로그인</a>
+                </div>
+            </div>
+            <div className="serviceintro-main-content">
+                <div className="serviceintro-up">
+                    <div className="serviceintro-title-explain">
+                        <div className="serviceintro-title">Target</div>
+                        <div className="serviceintro-explain">
+                            반반백조의 프로젝트는 대구 신공항에 AI 기술을 도입하여 스마트공항으로의 발전을 도모하고 있습니다.
                             <br/>
-                            국내 공항 핵심 서비스들의 단점을 AI 기술로 보완하여 공항 서비스에 대한
-                            솔루션을 제공합니다.
+                            국내 공항 핵심 서비스들의 단점을 AI 기술로 보완하여 공항 서비스에 대한 솔루션을 제공합니다.
                         </div>
                     </div>
-                    <div className="line-5"></div>
+                    <div className="serviceintro-content-divide"></div>
                 </div>
-                <div className="frame-644">
-                    <div className="frame-495">
-                        <div className="service">Service</div>
-                        <div className="div3">
+                <div className="serviceintro-bottom">
+                    <div className="serviceintro-bottom-text">
+                        <div className="serviceintro-bottom-title">Service</div>
+                        <div className="serviceintro-bottom-explain">
                             ‘반반백조’의 프로젝트가 제공하는 서비스를 한눈에 살펴보세요.
                         </div>
                     </div>
-                    <div className="frame-493">
-                        <div className="frame-492">
-                            <div className="div4">고객 서비스</div>
-                            <div className="frame-489">
-                                <div className="frame-488">
-                                    <img className="icn-1-1" src="icn-1-10.svg"/>
-                                    <div className="div5">수속시간안내</div>
-                                    <div
-                                        className="we-keep-your-web-build-online-24-x-7-x-365-downtime-not-only-costs-you-lost-visitors-but-also-damages-your-reputation-and-search-engine-rankings"
-                                    >
+                    <div className="serviceintro-bottom-content">
+                        <div className="serviceintro-bottom-3-part">
+                            <div className="serviceintro-bottom-3-part-title">고객 서비스</div>
+                            <div className="serviceintro-bottom-3-part-content">
+                                <div className="serviceintro-content-container">
+                                    <img className="serviceintro-image-icon" src="/images/circle(temp).png"/>
+                                    <div className="serviceintro-content-title">수속시간안내</div>
+                                    <div className="serviceintro-content-explain">
                                         We Keep Your Web build Online 24x7x365.
                                         <br/>
                                         Downtime not only costs you lost visitors but also damages your
                                         reputation and search engine rankings.
                                     </div>
                                 </div>
-                                <div className="uptime">
-                                    <div className="frame-4882">
-                                        <img className="icn-1-12" src="icn-1-11.svg"/>
-                                        <div className="div5">반입물품안내</div>
-                                        <div
-                                            className="we-keep-your-web-build-online-24-x-7-x-365-downtime-not-only-costs-you-lost-visitors-but-also-damages-your-reputation-and-search-engine-rankings"
-                                        >
-                                            We Keep Your Web build Online 24x7x365.
-                                            <br/>
-                                            Downtime not only costs you lost visitors but also damages
-                                            your reputation and search engine rankings.
-                                        </div>
+                                <div className="serviceintro-content-container">
+                                    <img className="serviceintro-image-icon2" src="/images/circle(temp).png"/>
+                                    <div className="serviceintro-content-title">반입물품안내</div>
+                                    <div className="serviceintro-content-explain">
+                                        We Keep Your Web build Online 24x7x365.
+                                        <br/>
+                                        Downtime not only costs you lost visitors but also damages your
+                                        reputation and search engine rankings.
                                     </div>
                                 </div>
-                                <div className="uptime">
-                                    <div className="frame-4883">
-                                        <img className="icn-1-13" src="icn-1-12.svg"/>
-                                        <div className="div5">분실물찾기</div>
-                                        <div
-                                            className="we-keep-your-web-build-online-24-x-7-x-365-downtime-not-only-costs-you-lost-visitors-but-also-damages-your-reputation-and-search-engine-rankings"
-                                        >
-                                            We Keep Your Web build Online 24x7x365.
-                                            <br/>
-                                            Downtime not only costs you lost visitors but also damages
-                                            your reputation and search engine rankings.
-                                        </div>
+                                <div className="serviceintro-content-container">
+                                    <img className="serviceintro-image-icon3" src="/images/circle(temp).png"/>
+                                    <div className="serviceintro-content-title">분실물찾기</div>
+                                    <div className="serviceintro-content-explain">
+                                        We Keep Your Web build Online 24x7x365.
+                                        <br/>
+                                        Downtime not only costs you lost visitors but also damages your
+                                        reputation and search engine rankings.
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="frame-491">
-                            <div className="div4">직원 서비스</div>
-                            <div className="frame-490">
-                                <div className="frame-4892">
-                                    <img className="icn-1-14" src="icn-1-13.svg"/>
-                                    <div className="div5">분실물찾기</div>
-                                    <div
-                                        className="we-keep-your-web-build-online-24-x-7-x-365-downtime-not-only-costs-you-lost-visitors-but-also-damages-your-reputation-and-search-engine-rankings"
-                                    >
+                        <div className="serviceintro-bottom-2-part">
+                            <div className="serviceintro-bottom-2-part-title">직원 서비스</div>
+                            <div className="serviceintro-bottom-2-part-content">
+                                <div className="serviceintro-content-container">
+                                    <img className="serviceintro-image-icon4" src="/images/circle(temp).png"/>
+                                    <div className="serviceintro-content-title">분실물찾기</div>
+                                    <div className="serviceintro-content-explain">
                                         We Keep Your Web build Online 24x7x365.
                                         <br/>
                                         Downtime not only costs you lost visitors but also damages your
                                         reputation and search engine rankings.
                                     </div>
                                 </div>
-                                <div className="frame-488">
-                                    <img className="icn-1-15" src="icn-1-14.svg"/>
-                                    <div className="div5">택시승강장관리</div>
-                                    <div
-                                        className="we-keep-your-web-build-online-24-x-7-x-365-downtime-not-only-costs-you-lost-visitors-but-also-damages-your-reputation-and-search-engine-rankings"
-                                    >
+                                <div className="serviceintro-content-container">
+                                    <img className="serviceintro-image-icon5" src="/images/circle(temp).png"/>
+                                    <div className="serviceintro-content-title">분실물찾기</div>
+                                    <div className="serviceintro-content-explain">
                                         We Keep Your Web build Online 24x7x365.
                                         <br/>
                                         Downtime not only costs you lost visitors but also damages your
@@ -101,25 +102,10 @@ function ServiceIntro(){
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className="div6">
-                <div className="div7">
-                    <div className="frame-477">
-                        <div className="div8">서비스소개</div>
-                        <div className="div8">수속시간안내</div>
-                        <div className="div8">반입물품안내</div>
-                        <div className="div8">분실물찾기</div>
-                    </div>
-                    <div className="frame-485">
-                        <div className="div8">분실물등록</div>
-                        <div className="div8">택시승강장관리</div>
-                        <div className="div8">로그인</div>
-                    </div>
-                    <img className="frame-538" src="frame-5380.png"/>
                 </div>
             </div>
         </div>
+
 
     );
 }
