@@ -1,6 +1,6 @@
-import React, {useState}from 'react';
+import React, {useState} from 'react';
 import '../styles/Login.css';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function Login() {
 
@@ -21,10 +21,10 @@ function Login() {
                     <div className="login-frame">
                         <div className="input">
                             <div className="id">
-                                <img className="user-alt-light" src="/images/human_icon.png" alt='dd' />
+                                <img className="user-alt-light" src="/images/human_icon.png" alt='dd'/>
                                 <input className="label"
-                                    type="text"
-                                    placeholder="Enter your ID or Email"
+                                       type="text"
+                                       placeholder="Enter your ID or Email"
                                 />
 
                             </div>
@@ -80,7 +80,7 @@ function Login() {
                     <div className="sign-up-2">
         <span>
           <span className="sign-up-2-span">Don’t have an account? </span>
-          <Link to ='/Signup' className="sign-up-2-span2">Singup </Link>
+          <Link to='/Signup' className="sign-up-2-span2">Singup </Link>
           <span className="sign-up-2-span3">now</span>
         </span>
                     </div>
