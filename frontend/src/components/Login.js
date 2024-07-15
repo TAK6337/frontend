@@ -1,5 +1,6 @@
 import React, {useState}from 'react';
 import '../styles/Login.css';
+import { Link } from 'react-router-dom';
 
 function Login() {
 
@@ -79,7 +80,7 @@ function Login() {
                     <div className="sign-up-2">
         <span>
           <span className="sign-up-2-span">Don’t have an account? </span>
-          <span className="sign-up-2-span2">Singup </span>
+          <Link to ='/Signup' className="sign-up-2-span2">Singup </Link>
           <span className="sign-up-2-span3">now</span>
         </span>
                     </div>
