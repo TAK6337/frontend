@@ -21,7 +21,7 @@ function Home() {
                                         <div className="rectangle-4169"></div>
                                         <Link to ='#' className="div10">비밀번호찾기</Link>
                                         <div className="rectangle-4168"></div>
-                                        <Link to ='#' className="div10">회원가입</Link>
+                                        <Link to ='/Signup' className="div10">회원가입</Link>
                                     </div>
                                 </div>
                             </div>
