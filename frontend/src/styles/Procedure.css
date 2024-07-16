@@ -1,8 +1,8 @@
-.div,
-.div * {
+.procedure-div,
+.procedure-div * {
     box-sizing: border-box;
 }
-.div {
+.procedure-div {
     background: #ffffff;
     width: 1200px;
     height: 1900px;
@@ -13,7 +13,7 @@
     margin: 0 auto; /* 가로 중앙 정렬 */
 
 }
-.main {
+.procedure-main {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -24,7 +24,7 @@
     left: calc(50% - 570px);
     top: 586px;
 }
-.main-title {
+.procedure-main-title {
     color: #000000;
     text-align: center;
     font-family: "NotoSans-Bold", sans-serif;
@@ -33,7 +33,7 @@
     position: relative;
     align-self: stretch;
 }
-.main-ex {
+.procedure-main-ex {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -43,7 +43,7 @@
     flex-shrink: 0;
     position: relative;
 }
-.one {
+.procedure-one {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-Bold", sans-serif;
@@ -51,7 +51,7 @@
     font-weight: 700;
     position: relative;
 }
-.one-ex {
+.procedure-one-ex {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -59,13 +59,13 @@
     font-weight: 400;
     position: relative;
 }
-.one-ex-span {
+.procedure-one-ex-span {
     color: #000000;
     font-family: "NotoSans-DisplayRegular", sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
-.one-ex-span2 {
+.procedure-one-ex-span2 {
     color: #000000;
     list-style-type: disc;
     padding-left: 1em;
@@ -73,7 +73,7 @@
     font-size: 16px;
     font-weight: 400;
 }
-.two {
+.procedure-two {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-Bold", sans-serif;
@@ -81,7 +81,7 @@
     font-weight: 700;
     position: relative;
 }
-.two-ex {
+.procedure-two-ex {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -89,7 +89,7 @@
     font-weight: 400;
     position: relative;
 }
-.three {
+.procedure-three {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-Bold", sans-serif;
@@ -97,7 +97,7 @@
     font-weight: 700;
     position: relative;
 }
-.three-ex {
+.procedure-three-ex {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -105,7 +105,7 @@
     font-weight: 400;
     position: relative;
 }
-.four {
+.procedure-four {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-Bold", sans-serif;
@@ -113,7 +113,7 @@
     font-weight: 700;
     position: relative;
 }
-.four-ex {
+.procedure-four-ex {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -121,7 +121,7 @@
     font-weight: 400;
     position: relative;
 }
-.five {
+.procedure-five {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-Bold", sans-serif;
@@ -129,7 +129,7 @@
     font-weight: 700;
     position: relative;
 }
-.five-ex {
+.procedure-five-ex {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -137,7 +137,7 @@
     font-weight: 400;
     position: relative;
 }
-.six {
+.procedure-six {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-Bold", sans-serif;
@@ -145,7 +145,7 @@
     font-weight: 700;
     position: relative;
 }
-.six-ex {
+.procedure-six-ex {
     color: #000000;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -153,7 +153,7 @@
     font-weight: 400;
     position: relative;
 }
-.process-images {
+.procedure-process-images {
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -164,7 +164,7 @@
     left: calc(50% - 365px);
     top: 300px;
 }
-.process-1 {
+.procedure-process-1 {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -174,7 +174,7 @@
     width: 100px;
     position: relative;
 }
-.process-info {
+.procedure-process-info {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -184,7 +184,7 @@
     flex-shrink: 0;
     position: relative;
 }
-.pr-info {
+.procedure-pr-info {
     background: rgba(232, 234, 246, 0.5);
     border-radius: 10px 10px 0px 0px;
     align-self: stretch;
@@ -193,7 +193,7 @@
     position: relative;
     overflow: hidden;
 }
-.car-front {
+.procedure-car-front {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -201,7 +201,7 @@
     top: calc(50% - 66px);
     overflow: visible;
 }
-.pr-name {
+.procedure-pr-name {
     background: #c5cae9;
     border-radius: 0px 0px 10px 10px;
     align-self: stretch;
@@ -210,7 +210,7 @@
     position: relative;
     overflow: hidden;
 }
-.div2 {
+.procedure-div2 {
     color: #ffffff;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -220,7 +220,7 @@
     left: calc(50% - 43px);
     top: calc(50% - 10px);
 }
-.process-2 {
+.procedure-process-2 {
     display: flex;
     flex-direction: row;
     gap: 2px;
@@ -229,7 +229,7 @@
     flex-shrink: 0;
     position: relative;
 }
-.process-info2 {
+.procedure-process-info2 {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -239,7 +239,7 @@
     width: 100px;
     position: relative;
 }
-.pr-info2 {
+.procedure-pr-info2 {
     background: rgba(232, 234, 246, 0.5);
     border-radius: 10px 0px 0px 0px;
     align-self: stretch;
@@ -248,7 +248,7 @@
     position: relative;
     overflow: hidden;
 }
-.user-check-01 {
+.procedure-user-check-01 {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -256,7 +256,7 @@
     top: calc(50% - 66px);
     overflow: visible;
 }
-.pr-name2 {
+.procedure-pr-name2 {
     background: #9fa8da;
     border-radius: 0px 0px 0px 10px;
     align-self: stretch;
@@ -265,7 +265,7 @@
     position: relative;
     overflow: hidden;
 }
-.div3 {
+.procedure-div3 {
     color: #ffffff;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -275,7 +275,7 @@
     left: calc(50% - 34px);
     top: calc(50% - 10px);
 }
-.pr-info3 {
+.procedure-pr-info3 {
     background: rgba(232, 234, 246, 0.5);
     border-radius: 0px 10px 0px 0px;
     align-self: stretch;
@@ -284,7 +284,7 @@
     position: relative;
     overflow: hidden;
 }
-.luggage-01 {
+.procedure-luggage-01 {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -292,7 +292,7 @@
     top: calc(50% - 66px);
     overflow: visible;
 }
-.pr-name3 {
+.procedure-pr-name3 {
     background: #9fa8da;
     border-radius: 0px 0px 10px 0px;
     align-self: stretch;
@@ -301,7 +301,7 @@
     position: relative;
     overflow: hidden;
 }
-.div4 {
+.procedure-div4 {
     color: #ffffff;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -311,7 +311,7 @@
     left: calc(50% - 33px);
     top: calc(50% - 10px);
 }
-.process-3 {
+.procedure-process-3 {
     display: flex;
     flex-direction: row;
     gap: 2px;
@@ -320,7 +320,7 @@
     flex-shrink: 0;
     position: relative;
 }
-.group-account {
+.procedure-group-account {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -328,7 +328,7 @@
     top: calc(50% - 66px);
     overflow: visible;
 }
-.pr-name4 {
+.procedure-pr-name4 {
     background: #7986cb;
     border-radius: 0px 0px 0px 10px;
     align-self: stretch;
@@ -337,7 +337,7 @@
     position: relative;
     overflow: hidden;
 }
-.div5 {
+.procedure-div5 {
     color: #ffffff;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -347,7 +347,7 @@
     left: calc(50% - 26px);
     top: calc(50% - 10px);
 }
-.police {
+.procedure-police {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -355,7 +355,7 @@
     top: calc(50% - 66px);
     overflow: visible;
 }
-.pr-name5 {
+.procedure-pr-name5 {
     background: #7986cb;
     border-radius: 0px 0px 10px 0px;
     align-self: stretch;
@@ -364,7 +364,7 @@
     position: relative;
     overflow: hidden;
 }
-.process-4 {
+.procedure-process-4 {
     display: flex;
     flex-direction: row;
     gap: 2px;
@@ -373,7 +373,7 @@
     flex-shrink: 0;
     position: relative;
 }
-.passport {
+.procedure-passport {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -381,7 +381,7 @@
     top: calc(50% - 66px);
     overflow: visible;
 }
-.pr-name6 {
+.procedure-pr-name6 {
     background: #5c6bc1;
     border-radius: 0px 0px 0px 10px;
     align-self: stretch;
@@ -390,7 +390,7 @@
     position: relative;
     overflow: hidden;
 }
-.departure {
+.procedure-departure {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -398,7 +398,7 @@
     top: calc(50% - 66px);
     overflow: visible;
 }
-.pr-name7 {
+.procedure-pr-name7 {
     background: #5c6bc0;
     border-radius: 0px 0px 10px 0px;
     align-self: stretch;
@@ -407,7 +407,7 @@
     position: relative;
     overflow: hidden;
 }
-.div6 {
+.procedure-div6 {
     color: #ffffff;
     text-align: left;
     font-family: "NotoSans-DisplayRegular", sans-serif;
@@ -417,7 +417,7 @@
     left: calc(50% - 13px);
     top: calc(50% - 10px);
 }
-.title {
+.procedure-title {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -427,7 +427,7 @@
     left: calc(50% - 213px);
     top: 173px;
 }
-.title-text {
+.procedure-title-text {
     color: #000000;
     text-align: center;
     font-family: "NotoSans-Bold", sans-serif;
@@ -435,7 +435,7 @@
     font-weight: 700;
     position: relative;
 }
-.title-explain {
+.procedure-title-explain {
     display: flex;
     flex-direction: row;
     gap: 7px;
@@ -444,14 +444,14 @@
     flex-shrink: 0;
     position: relative;
 }
-.mini-plane {
+.procedure-mini-plane {
     flex-shrink: 0;
     width: 24px;
     height: 24px;
     position: relative;
     overflow: hidden;
 }
-.airplane-travel-plane-adventure-airplane-transportation {
+.procedure-airplane-travel-plane-adventure-airplane-transportation {
     width: 89.29%;
     height: 60.5%;
     position: absolute;
@@ -461,7 +461,7 @@
     top: 19.64%;
     overflow: visible;
 }
-.title-explain-text {
+.procedure-title-explain-text {
     color: #000000;
     text-align: center;
     font-family: "Inter-ExtraLight", sans-serif;

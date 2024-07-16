@@ -17,7 +17,7 @@ function NavigationBar() {
             </a>
             <div className="home-right-side">
                 <Link to='/' className="home-right-side-text">분실물등록</Link>
-                <Link to='/' className="home-right-side-text">택시승강장관리</Link>
+                <Link to='/Taxi' className="home-right-side-text">택시승강장관리</Link>
                 <a href='/Login' className="home-right-side-text">로그인</a>
             </div>
         </div>

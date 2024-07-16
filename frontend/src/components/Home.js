@@ -173,9 +173,9 @@ function Home() {
                                     </div>
                                 </div>
                             </a>
-                            <Link to='/Time' className="home-sub-content-1-container">
+                            <Link to='/Procedure' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
-                                    <div className="home-sub-content-1-container-text-1">수속시간안내</div>
+                                    <div className="home-sub-content-1-container-text-1">수속과정안내</div>
                                     <div className="home-sub-content-1-container-right">
                                         <img className="home-sub-content-1-container-image"
                                              src="/images/main_sub_ticket.png"/>

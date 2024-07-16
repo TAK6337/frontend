@@ -6,6 +6,8 @@ import Signup from './components/Signup';
 import PrivacyAgreement from './components/PrivacyAgreement';
 import ServiceIntro from "./components/ServiceIntro";
 import Procedure from "./components/Procedure";
+import Taxi from "./components/Taxi"
+
 function App() {
     const [agreed, setAgreed] = useState(false);
   return (
@@ -17,6 +19,7 @@ function App() {
               <Route path="/PrivacyAgreement" element={<PrivacyAgreement setAgreed={setAgreed} />} />
               <Route path="/ServiceIntro" element={<ServiceIntro/>} />
               <Route path="/procedure" element={<Procedure/>} />
+              <Route path="/Taxi" element={<Taxi/>} />
           </Routes>
       </Router>
   );

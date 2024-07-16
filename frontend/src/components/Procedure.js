@@ -6,21 +6,21 @@ import NavigationBar from '../components/NavigationBar';
 function Procedure() {
 
     return(
-        <div className="div">
+        <div className="procedure-div">
             <NavigationBar/>
-            <div className="main">
-                <div className="main-title">탑승수속 과정 상세</div>
-                <div className="main-ex">
-                    <div className="one">STEP 01. 공항 도착</div>
-                    <div className="one-ex">
+            <div className="procedure-main">
+                <div className="procedure-main-title">탑승수속 과정 상세</div>
+                <div className="procedure-main-ex">
+                    <div className="procedure-one">STEP 01. 공항 도착</div>
+                    <div className="procedure-one-ex">
                         <span>
-                          <span className="one-ex-span">
+                          <span className="procedure-one-ex-span">
                             출발 2시간 전까지 공항에 도착하셔야 합니다.
                             <br/>
                             탑승 수속 시 반드시 지참하세요!
                             <br/>
                           </span>
-                          <ul className="one-ex-span2">
+                          <ul className="procedure-one-ex-span2">
                             <li>
                               여권 : 대부분의 국가는 출국일 기준 여권 유효기간이 6개월 이상 남아
                               있어야 하며, 서명란에 본인 자필 서명 필요 국내선은 유효 신분증
@@ -30,9 +30,9 @@ function Procedure() {
                           </ul>
                         </span>
                     </div>
-                    <div className="two">STEP 02. 탑승 수속 및 탑승권 발급</div>
-                    <div className="two-ex">
-                        <ul className="two-ex-span">
+                    <div className="procedure-two">STEP 02. 탑승 수속 및 탑승권 발급</div>
+                    <div className="procedure-two-ex">
+                        <ul className="procedure-two-ex-span">
                             <li>
                                 여권 및 여행에 필요한 서류(비자), 전자항공권을 제시하여 좌석 배정을
                                 받고 수하물 위탁과 함께 탑승권과 수하물표를 받으실 수 있습니다.
@@ -42,9 +42,9 @@ function Procedure() {
                             <li>국내선 : 항공편 출발 30분 전</li>
                         </ul>
                     </div>
-                    <div className="three">STEP 03. 병무 심사, 검역 신고, 세관 신고</div>
-                    <div className="three-ex">
-                        <ul className="three-ex-span">
+                    <div className="procedure-three">STEP 03. 병무 심사, 검역 신고, 세관 신고</div>
+                    <div className="procedure-three-ex">
+                        <ul className="procedure-three-ex-span">
                             <li>
                                 병무 심사 : 25세 이상 병역 미필 병역 의무자가 국외를 여행하고자 할
                                 때는 병무청에 국외 여행허가를 받고 출국 당일 법무부 출입국에서
@@ -64,9 +64,9 @@ function Procedure() {
                             </li>
                         </ul>
                     </div>
-                    <div className="four">STEP 04. 보안 검색</div>
-                    <div className="four-ex">
-                        <ul className="four-ex-span">
+                    <div className="procedure-four">STEP 04. 보안 검색</div>
+                    <div className="procedure-four-ex">
+                        <ul className="procedure-four-ex-span">
                             <li>
                                 여행자와 항공기의 안전을 위해 여행객 및 휴대품을 대상으로 보안검색을
                                 실시합니다.
@@ -76,9 +76,9 @@ function Procedure() {
                             </li>
                         </ul>
                     </div>
-                    <div className="five">STEP 05. 출국 심사</div>
-                    <div className="five-ex">
-                        <ul className="five-ex-span">
+                    <div className="procedure-five">STEP 05. 출국 심사</div>
+                    <div className="procedure-five-ex">
+                        <ul className="procedure-five-ex-span">
                             <li>
                                 여행자는 유효한 여권과 도착 국가에서 요구하는 여행서류(비자)를
                                 지참하고 출국심사를 받으시게 됩니다.
@@ -93,9 +93,9 @@ function Procedure() {
                             </li>
                         </ul>
                     </div>
-                    <div className="six">STEP 06. 항공기 탑승</div>
-                    <div className="six-ex">
-                        <ul className="six-ex-span">
+                    <div className="procedure-six">STEP 06. 항공기 탑승</div>
+                    <div className="procedure-six-ex">
+                        <ul className="procedure-six-ex-span">
                             <li>
                                 출발 탑승구에 미리 도착 후 대기하시어 정시 출발에 협조를 부탁
                                 드립니다.
@@ -108,19 +108,19 @@ function Procedure() {
                     </div>
                 </div>
             </div>
-            <img className="process-images" src="/images/process-images.png">
+            <img className="procedure-process-images" src="/images/process-images.png">
 
             </img>
-            <div className="title">
-                <div className="title-text">탑승수속 과정 안내</div>
-                <div className="title-explain">
-                    <div className="mini-plane">
+            <div className="procedure-title">
+                <div className="procedure-title-text">탑승수속 과정 안내</div>
+                <div className="procedure-title-explain">
+                    <div className="procedure-mini-plane">
                         <img
-                            className="airplane-travel-plane-adventure-airplane-transportation"
+                            className="procedure-airplane-travel-plane-adventure-airplane-transportation"
                             src="/images/mini_plane.png"
                         />
                     </div>
-                    <div className="title-explain-text">
+                    <div className="procedure-title-explain-text">
                         공항 도착에서부터 항공편 탑승까지 절차를 안내해 드립니다
                     </div>
                 </div>
