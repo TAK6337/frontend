@@ -174,6 +174,7 @@
     font-weight: 200;
     position: relative;
 }
+
 .time-middle {
     display: flex;
     flex-direction: column;
@@ -183,16 +184,69 @@
     align-self: stretch;
     flex-shrink: 0;
     position: relative;
+    transition: opacity 0.3s ease-in-out;
+}
+.time-middle.inactive {
+    animation: slide-out 0.5s ease-out forwards; /* 비활성화 상태일 때 opacity를 0으로 설정하여 페이드 아웃 */
+}
+@keyframes slide-in {
+    0% { transform: translateX(100%); } /* 시작 위치 설정 */
+    100% { transform: translateX(0); } /* 최종 위치 설정 */
+}
+@keyframes slide-out {
+    0% { transform: translateX(-100%); } /* 시작 위치 설정 */
+    100% { transform: translateX(0); } /* 최종 위치 설정 */
+}
+.time-middle.active {
+    animation: slide-in 0.5s ease-out forwards; /* 0.5초 동안 ease-out 가속도로 slide-in 애니메이션 적용 */
+}
+.time-move-btn {
+    position: absolute;
+    top: 50%; /* 버튼을 이미지와 텍스트 중앙에 배치 */
+    right: -150px; /* 오른쪽으로 100px 이동 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.time-move-btn2 {
+    position: absolute;
+    top: 50%; /* 버튼을 이미지와 텍스트 중앙에 배치 */
+    left: -150px; /* 오른쪽으로 100px 이동 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.time-move-btn .time-next {
+    width: 72px;
+    height: 72px;
 }
 .time-middle-title {
     display: flex;
     flex-direction: row;
     gap: 6px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     align-self: stretch;
     flex-shrink: 0;
     position: relative;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
 }
 .time-middle-image {
     background: #283593;

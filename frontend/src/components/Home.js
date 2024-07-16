@@ -2,10 +2,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
-const getRandomNumber = () => {
-    return Math.floor(Math.random() * 60) + 1; // Generates a random number between 1 and 60
-};
-
 
 let lastScrollTop = 0;
 
@@ -26,22 +22,45 @@ window.addEventListener("scroll", function() {
 
 
 function Home() {
-    const [timeDigit, setTimeDigit] = useState(45)
-    const [timeDigit1, setTimeDigit1] = useState(7);
-    const [timeDigit2, setTimeDigit2] = useState(13);
-    const [timeDigit3, setTimeDigit3] = useState(20);
-    const [timeDigit4, setTimeDigit4] = useState(7);
-    const [timeDigit5, setTimeDigit5] = useState(20);
+    const [selectedNumber, setSelectedNumber] = useState(5);
+    const [selectedNumber2, setSelectedNumber2] = useState(7);
+    const [isNextScreen, setIsNextScreen] = useState(false);
 
-
+    // 갱신 버튼 클릭 시 실행될 함수
     const handleRefreshClick = () => {
-        // 새로운 숫자를 랜덤으로 생성하거나, 기존 숫자에 변화를 주는 로직을 구현
-        setTimeDigit(getRandomNumber());
-        setTimeDigit1(getRandomNumber());
-        setTimeDigit2(getRandomNumber());
-        setTimeDigit3(getRandomNumber());
-        setTimeDigit4(getRandomNumber());
-        setTimeDigit5(getRandomNumber());
+        // 1부터 60 사이의 랜덤 숫자 생성
+        const randomNumber = Math.floor(Math.random() * 60) + 1;
+        const randomNumber2 = Math.floor(Math.random() * 60) + 1;
+        setSelectedNumber(randomNumber);
+        setSelectedNumber2(randomNumber2);
+
+    };
+
+    const getImagePath = () => {
+        if (selectedNumber >= 0 && selectedNumber <= 20) {
+            return "/images/clean.png"; // 0부터 20 사이
+        } else if (selectedNumber > 20 && selectedNumber <= 40) {
+            return '/images/normal.png'; // 21부터 40 사이
+        } else if (selectedNumber > 40 && selectedNumber <= 60) {
+            return '/images/busy.png'; // 41부터 60 사이
+        } else {
+            return null; // 범위를 벗어나면 null 반환
+        }
+    };
+    const getImagePath2 = () => {
+        if (selectedNumber2 >= 0 && selectedNumber2 <= 20) {
+            return "/images/clean.png"; // 0부터 20 사이
+        } else if (selectedNumber2 > 20 && selectedNumber2 <= 40) {
+            return '/images/normal.png'; // 21부터 40 사이
+        } else if (selectedNumber2 > 40 && selectedNumber2 <= 60) {
+            return '/images/busy.png'; // 41부터 60 사이
+        } else {
+            return null; // 범위를 벗어나면 null 반환
+        }
+    };
+    const handleMoveClick = () => {
+        setIsNextScreen(!isNextScreen); // isNextScreen 상태를 토글하여 화면 전환
+
 
     };
 
@@ -66,115 +85,87 @@ function Home() {
 
             <div className="home-content">
 
-                <div className="home-primary-content">
-                    <div className="home-primary-content-main">
-                        <div className="home-primary-content-description">
-                            <div className="home-primary-content-title">
-                                <div className="home-primary-content-title-main">공항도착 권장시간</div>
-                                <div className="home-primary-content-title-sub">
-                                    권장시간 전에 공항에 도착하시면 여유롭게 비행기 탑승이 가능합니다
-                                </div>
-                            </div>
-                            <div className="home-primary-content-time">
-                                <div className="home-primary-content-time-digit">{timeDigit}</div>
-                                <div className="home-primary-content-time-text">분</div>
-                            </div>
+                {isNextScreen ? (
+                    <div className={`time-middle ${isNextScreen ? 'active' : 'inactive'}`}>
+                        <div className="time-middle-title">
+                            보안검색 소요시간
                         </div>
-                        <div className="home-primary-content-process">
-                            <div className="home-process-util">
-                                <div className="home-process-name">
-                                    <div className="home-process-name-text">탑승수속 과정</div>
+                        <div className="time-main-image">
+                            <div className="time-image-container">
+                                {selectedNumber2 && (
+                                    <img
+                                        className="time-image"
+                                        src={getImagePath2()}
+                                        alt={`Image for number ${selectedNumber2}`}
+                                    />
+                                )}
+                                <div className="time-time-container">
+                                    <span className="time-time-span">
+                                        {selectedNumber2}
+                                    </span>
+                                    <span className="time-time-span2">
+                                        분
+                                    </span>
                                 </div>
-                                <button className="home-refresh-btn" onClick={handleRefreshClick}>
-                                    <img className="home-refresh" src="/images/refresh.png"/>
+                                <button className="time-move-btn2" onClick={handleMoveClick}>
+                                    <img
+                                        className="time-next"
+                                        src="/images/Arrow_drop_left@3x.png"
+                                        alt="next"
+                                    />
                                 </button>
                             </div>
-                            <div className="home-process-images">
-                                <div className="home-process-1">
-                                    <div className="home-process-info">
-                                        <div className="home-pr-info">
-                                            <img className="home-car-front" src="/images/main_car.png"/>
-                                            <div className="home-frame-595">
-                                                <div className="home-div2">평균</div>
-                                                <div className="home-_7">{timeDigit1}분</div>
-                                            </div>
-                                        </div>
-                                        <div className="home-pr-name">
-                                            <div className="home-div6">공항도착(주차)</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="home-process-2">
-                                    <div className="home-process-info2">
-                                        <div className="home-pr-info2">
-                                            <img className="home-user-check-01" src="/images/user_check.png"/>
-                                        </div>
-                                        <div className="home-pr-name2">
-                                            <div className="home-div6">셀프 체크인</div>
-                                        </div>
-                                    </div>
-                                    <div className="home-process-info2">
-                                        <div className="home-pr-info3">
-                                            <img className="home-luggage-01" src="/images/main_luggage.png"/>
-                                        </div>
-                                        <div className="home-pr-name3">
-                                            <div className="home-div6">수하물위탁</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="home-process-3">
-                                    <div className="home-process-info2">
-                                        <div className="home-pr-info2">
-                                            <img className="home-group-account" src="/images/main_account.png"/>
-                                        </div>
-                                        <div className="home-pr-name4">
-                                            <div className="home-div6">신분확인</div>
-                                        </div>
-                                    </div>
-                                    <div className="home-process-info2">
-                                        <div className="home-pr-info4">
-                                            <img className="home-police" src="/images/police.png"/>
-                                        </div>
-                                        <div className="home-pr-name5">
-                                            <div className="home-div6">보안검색</div>
-                                        </div>
-                                    </div>
-                                    <div className="home-process-info2">
-                                        <div className="home-pr-info3">
-                                            <img className="home-passport" src="/images/passport.png"/>
-                                        </div>
-                                        <div className="home-pr-name6">
-                                            <div className="home-div6">탑승시간</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="home-process-4">
-                                    <div className="home-process-info2">
-                                        <div className="home-pr-info">
-                                            <img className="home-departure" src="/images/airplane.png"/>
-                                            <div className="home-frame-595">
-                                                <div className="home-div2">평균</div>
-                                                <div className="home-_20">{timeDigit5}분</div>
-                                            </div>
-                                        </div>
-                                        <div className="home-pr-name7">
-                                            <div className="home-div6">출발</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <button className="time-btn-frame" onClick={handleRefreshClick}>
+                                <div className="time-btn-text">수속시간 갱신</div>
+                                <img
+                                    className="time-refresh"
+                                    src="/images/refresh.png"
+                                    alt="refresh"
+                                />
+                            </button>
                         </div>
                     </div>
-                    <div className="home-time-3">
-                        <div className="home-time-text">{timeDigit2}분</div>
+                ) : (
+                    <div className={`time-middle ${isNextScreen ? 'active' : 'inactive'}`}>
+                        <div className="time-middle-title">
+                            체크인 소요시간
+                        </div>
+                        <div className="time-main-image">
+                            <div className="time-image-container">
+                                {selectedNumber && (
+                                    <img
+                                        className="time-image"
+                                        src={getImagePath()}
+                                        alt={`Image for number ${selectedNumber}`}
+                                    />
+                                )}
+                                <div className="time-time-container">
+                                    <span className="time-time-span">
+                                        {selectedNumber}
+                                    </span>
+                                    <span className="time-time-span2">
+                                        분
+                                    </span>
+                                </div>
+                                <button className="time-move-btn" onClick={handleMoveClick}>
+                                    <img
+                                        className="time-next"
+                                        src="/images/Arrow_drop_right@3x.png"
+                                        alt="next"
+                                    />
+                                </button>
+                            </div>
+                            <button className="time-btn-frame" onClick={handleRefreshClick}>
+                                <div className="time-btn-text">수속시간 갱신</div>
+                                <img
+                                    className="time-refresh"
+                                    src="/images/refresh.png"
+                                    alt="refresh"
+                                />
+                            </button>
+                        </div>
                     </div>
-                    <div className="home-time-2">
-                        <div className="home-time-text">{timeDigit3}분</div>
-                    </div>
-                    <div className="home-time-1">
-                        <div className="home-time-text">{timeDigit4}분</div>
-                    </div>
-                </div>
+                )}
                 <div className="home-sub-content-1">
                     <div className="home-sub-content-1-description">
                         <img className="home-sub-content-1-rect" src="/images/main_star.png"/>
@@ -182,11 +173,12 @@ function Home() {
                     </div>
                     <div className="home-sub-content-1-main">
                         <div className="home-sub-content-1-line">
-                            <a href ='/ServiceIntro' className="home-sub-content-1-container">
+                            <a href='/ServiceIntro' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
                                     <div className="home-sub-content-1-container-text-1">서비스소개</div>
                                     <div className="home-sub-content-1-container-right">
-                                        <img className="home-sub-content-1-container-image" src="/images/main_sub_plane.png"/>
+                                        <img className="home-sub-content-1-container-image"
+                                             src="/images/main_sub_plane.png"/>
                                         <div className="home-arrow-box">
                                             <img
                                                 className="home-arrow-narrow-right"
@@ -196,11 +188,12 @@ function Home() {
                                     </div>
                                 </div>
                             </a>
-                            <Link to ='/Time' className="home-sub-content-1-container">
+                            <Link to='/Time' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
                                     <div className="home-sub-content-1-container-text-2">수속시간안내</div>
                                     <div className="home-sub-content-1-container-right">
-                                        <img className="home-sub-content-1-container-image" src="/images/main_sub_ticket.png"/>
+                                        <img className="home-sub-content-1-container-image"
+                                             src="/images/main_sub_ticket.png"/>
                                         <div className="home-arrow-box">
                                             <img
                                                 className="home-arrow-narrow-right2"
@@ -212,11 +205,12 @@ function Home() {
                             </Link>
                         </div>
                         <div className="home-sub-content-1-line">
-                            <Link to ='/' className="home-sub-content-1-container">
+                            <Link to='/' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
                                     <div className="home-sub-content-1-container-text-3">반입물품안내</div>
                                     <div className="home-sub-content-1-container-right">
-                                        <img className="home-sub-content-1-container-image" src="/images/main_sub_bag.png"/>
+                                        <img className="home-sub-content-1-container-image"
+                                             src="/images/main_sub_bag.png"/>
                                         <div className="home-arrow-box">
                                             <img
                                                 className="home-arrow-narrow-right3"
@@ -226,11 +220,12 @@ function Home() {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to ='/' className="home-sub-content-1-container">
+                            <Link to='/' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
                                     <div className="home-sub-content-1-container-text-4">분실물찾기</div>
                                     <div className="home-sub-content-1-container-right">
-                                        <img className="home-sub-content-1-container-image" src="/images/main_sub_luggage.png"/>
+                                        <img className="home-sub-content-1-container-image"
+                                             src="/images/main_sub_luggage.png"/>
                                         <div className="home-arrow-box">
                                             <img
                                                 className="home-arrow-narrow-right4"
@@ -341,27 +336,30 @@ function Home() {
                         <div className="home-sub-content-2-box">
                             <div className="home-sub-content-2-description">
                                 <div className="home-sub-content-2-text2">전체뉴스</div>
-                                <Link to ='/' className="home-sub-content-2-link">
+                                <Link to='/' className="home-sub-content-2-link">
                                     <div className="home-sub-content-2-link-text">바로가기</div>
-                                    <img className="home-arrow-narrow-right5" src="/images/arrow-narrow-right(black).png"/>
+                                    <img className="home-arrow-narrow-right5"
+                                         src="/images/arrow-narrow-right(black).png"/>
                                 </Link>
                             </div>
                         </div>
                         <div className="home-sub-content-2-box">
                             <div className="home-sub-content-2-description">
                                 <div className="home-sub-content-2-text2">보도자료</div>
-                                <Link to ='/' className="home-sub-content-2-link">
+                                <Link to='/' className="home-sub-content-2-link">
                                     <div className="home-sub-content-2-link-text">바로가기</div>
-                                    <img className="home-arrow-narrow-right6" src="/images/arrow-narrow-right(black).png"/>
+                                    <img className="home-arrow-narrow-right6"
+                                         src="/images/arrow-narrow-right(black).png"/>
                                 </Link>
                             </div>
                         </div>
                         <div className="home-sub-content-2-box">
                             <div className="home-sub-content-2-description">
                                 <div className="home-sub-content-2-text2">참고자료</div>
-                                <Link to ='/' className="home-sub-content-2-link">
+                                <Link to='/' className="home-sub-content-2-link">
                                     <div className="home-sub-content-2-link-text">바로가기</div>
-                                    <img className="home-arrow-narrow-right7" src="/images/arrow-narrow-right(black).png"/>
+                                    <img className="home-arrow-narrow-right7"
+                                         src="/images/arrow-narrow-right(black).png"/>
                                 </Link>
                             </div>
                         </div>
