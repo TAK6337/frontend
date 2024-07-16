@@ -145,10 +145,10 @@
     width: 100%;
     height: 100%;
     color: rgba(255, 255, 255, 0.1);
-    font-size: 20px;
+    font-size: 18px;
     white-space: nowrap;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
     animation: scroll-text 7s linear infinite;
     /*transform: rotate(-4deg); !* Rotate text *!*/
@@ -156,7 +156,7 @@
 
 .signup-button span {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 @keyframes scroll-text {
