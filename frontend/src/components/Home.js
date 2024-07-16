@@ -1,11 +1,12 @@
 // src/components/Home.js
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import '../styles/Home.css';
+import NavigationBar from "./NavigationBar";
 
 let lastScrollTop = 0;
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     let homeNavi = document.querySelector(".home-navi");
 
@@ -66,23 +67,7 @@ function Home() {
 
     return (
         <div className="home-div">
-            <div className="home-navi">
-                <div className="home-left-side">
-                    <Link to='/ServiceIntro' className="home-left-side-text">서비스소개</Link>
-                    <Link to='/Time' className="home-left-side-text">수속시간안내</Link>
-                    <Link to='/' className="home-left-side-text">반입물품안내</Link>
-                    <Link to='/' className="home-left-side-text">분실물찾기</Link>
-                </div>
-                <a href='/' className='main-logo'>
-                    <img src="/images/main_logo.png" alt="logo"/>
-                </a>
-                <div className="home-right-side">
-                    <Link to='/' className="home-right-side-text">분실물등록</Link>
-                    <Link to='/' className="home-right-side-text">택시승강장관리</Link>
-                    <a href='/Login' className="home-right-side-text">로그인</a>
-                </div>
-            </div>
-
+            <NavigationBar/>
             <div className="home-content">
 
                 {isNextScreen ? (

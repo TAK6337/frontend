@@ -1,26 +1,13 @@
 import React from 'react';
 import '../styles/ServiceIntro.css';
 import {Link} from "react-router-dom";
+import NavigationBar from '../components/NavigationBar';
+
 
 function ServiceIntro(){
     return(
         <div className="serviceintro-div">
-            <div className="home-navi">
-                <div className="home-left-side">
-                    <Link to='/ServiceIntro' className="home-left-side-text">서비스소개</Link>
-                    <Link to='/Time' className="home-left-side-text">수속시간안내</Link>
-                    <Link to='/' className="home-left-side-text">반입물품안내</Link>
-                    <Link to='/' className="home-left-side-text">분실물찾기</Link>
-                </div>
-                <a href='/' className='main-logo'>
-                    <img src="/images/main_logo.png" alt="logo"/>
-                </a>
-                <div className="home-right-side">
-                    <Link to='/' className="home-right-side-text">분실물등록</Link>
-                    <Link to='/' className="home-right-side-text">택시승강장관리</Link>
-                    <a href='/Login' className="home-right-side-text">로그인</a>
-                </div>
-            </div>
+            <NavigationBar/>
             <div className="serviceintro-main-content">
                 <div className="serviceintro-up">
                     <div className="serviceintro-title-explain">
