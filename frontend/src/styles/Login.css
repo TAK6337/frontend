@@ -1,494 +1,248 @@
-.login-page,
-.login-page * {
-    box-sizing: border-box;
-}
-.login-page {
-    background: #ffffff;
-    width: 1000px; /* 고정된 너비 지정 */
-    min-height: 1200px;
-    padding-bottom: 50px; /* 아래쪽 패딩 추가 */
-    position: relative;
-    overflow-y: hidden;
-    overflow-x: auto;
-    margin: 0 auto; /* 중앙 정렬 */
-}
-.full {
+.login-full-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    justify-content: flex-start;
-    width: 770px;
-    position: absolute;
-    left: 50%; /* 가운데 정렬을 위해 left를 50%로 설정 */
-    transform: translateX(-50%); /* left를 50% 기준으로 왼쪽으로 50% 이동 */
-    top: 54px;
-}
-.logo {
-    flex-shrink: 0;
-    width: 330px; /* 이미지의 너비를 조정 */
-    height: auto; /* 높이를 자동으로 조정 */
-    position: relative;
-    object-fit: contain; /* 이미지가 짤리지 않도록 설정 */
-}
-.login-main {
-    border-radius: 20px;
-    border-style: solid;
-    border-color: #666666;
-    border-width: 1px;
-    padding: 30px 0px 0px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 750px;
-    height: 700px;
-    position: relative;
-}
-.sign-in-2 {
-    color: #403cf2;
-    text-align: center;
-    font-family: "Poppins-Bold", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    position: relative;
-    width: 89px;
-    display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-text-stroke: 1px #403cf2;
+    background-color: #f9f9f9;
+    padding: 15px;
 }
-.login-frame {
+
+.login-home-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-title {
+    color: #3f51b5;
+    margin-bottom: 10px;
+    font-size: 1.7em;
+}
+
+.login-form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 650px;
-    position: relative;
 }
-.input {
+
+.form-group {
     display: flex;
     flex-direction: column;
-    gap: 33px;
+    margin-bottom: 15px;
+    position: relative;
     align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
 }
-.id {
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #666666;
-    border-width: 1px;
-    padding: 16px 11px 16px 11px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 70px;
-    position: relative;
+
+.input-label {
+    margin-bottom: 13px;
+    font-size: 14px;
+    font-weight: bold;
 }
-.user-alt-light {
-    flex-shrink: 0;
-    width: 36px;
-    height: 37.71px;
-    position: relative;
-    overflow: visible;
+
+.login-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 96%;
 }
-.label {
-    color: #000000;
-    text-align: left;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    position: relative;
-    width: 297.6px;
-    height: 29.04px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border: none;
-    outline: none;
-}
-.pw {
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #666666;
-    border-width: 1px;
-    padding: 14px 11px 14px 11px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 70px;
-    position: relative;
-}
-.frame-386 {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-}
-.lock-light {
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    position: relative;
-}
-.group-8 {
+
+.login-show-hide-button {
     position: absolute;
-    inset: 0;
-}
-.ellipse-6 {
-    background: var(--fillicon, #222222);
-    border-radius: 50%;
-    width: 16.67%;
-    height: 16.67%;
-    position: absolute;
-    right: 41.67%;
-    left: 41.67%;
-    bottom: 29.17%;
-    top: 54.17%;
-}
-.rectangle-5 {
-    border-radius: 0px;
-    width: 62.5%;
-    height: 45.83%;
-    position: absolute;
-    right: 18.75%;
-    left: 18.75%;
-    bottom: 14.58%;
-    top: 39.58%;
-    overflow: visible;
-}
-.vector-5 {
-    border-radius: 0px;
-    width: 37.5%;
-    height: 25%;
-    position: absolute;
-    right: 31.25%;
-    left: 31.25%;
-    bottom: 60.42%;
-    top: 14.58%;
-    overflow: visible;
-}
-.label-2 {
-    color: #000000;
-    text-align: left;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    position: relative;
-    width: 184px;
-    height: 28.84px;
-}
-.show {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-    background-color: transparent;
+    right: 5px;
+    top: 74%;
+    transform: translateY(-50%);
+    background: none;
     border: none;
     cursor: pointer;
+    color: #888;
     padding: 0;
+    font-size: 16px;
 }
-.group-1 {
-    flex-shrink: 0;
-    width: 19.59px;
-    height: 19.35px;
-    position: relative;
-    overflow: visible;
+
+.login-button:hover {
+    background-color: #0056b3;
 }
-.hide {
-    color: #a4a4a4;
-    text-align: left;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    position: relative;
-    width: 58px;
-    height: 33.27px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+
 .login-button {
-    background: #403cf2;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: flex-end;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 70px;
     position: relative;
-}
-.add {
-    opacity: 0.2;
-    flex-shrink: 0;
-    width: 534.17px;
-    height: 68.22px;
-    position: relative;
-    overflow: visible;
-}
-.sign-up {
-    color: #ffffff;
+    display: inline-block;
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    overflow: hidden;
     text-align: center;
-    font-family: "Poppins-SemiBold", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
+}
+
+.login-button::before {
+    content: "I love Aivle School You love Aivle School We love Aivle School";
     position: absolute;
-    left: calc(50% - 42px);
-    bottom: 29.97%;
-    top: 33.41%;
-    height: 25.64px;
-    width: 84.8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+    animation: scroll-text 7s linear infinite;
 }
-.find {
+
+.login-button span {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes scroll-text {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+.login-links {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+    margin-top: 10px;
 }
-.other-issue-with-sign-in {
-    color: #a4a4a4;
-    text-align: left;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: underline;
-    position: relative;
-    width: 203.08px;
-    height: 29.04px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+
+.find-link {
+    font-size: 14px;
+    color: #3f51b5;
 }
-.forget-your-password {
-    color: #a4a4a4;
-    text-align: right;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: underline;
-    position: relative;
-    width: 192.04px;
-    height: 29.04px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.social {
+
+.login-social {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 33px;
     align-items: center;
-    justify-content: flex-end;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
 }
-.google {
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #0085ff;
-    border-width: 1px;
-    padding: 8px 10px 8px 10px;
+
+.social-button {
     display: flex;
-    flex-direction: row;
-    gap: 12px;
     align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 48px;
-    position: relative;
-    text-decoration: none;
-}
-.logo-googleg-48-dp {
-    flex-shrink: 0;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    overflow: visible;
-}
-.label-22 {
-    color: #392020;
-    text-align: left;
-    font-family: "Poppins-Regular", sans-serif;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
     font-size: 16px;
-    font-weight: 400;
-    position: relative;
-    width: 188.15px;
-    height: 28.84px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
 }
-.kakao {
-    background: #fee500;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #fee500;
-    border-width: 1px;
-    padding: 8px 10px 8px 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 48px;
-    position: relative;
-    text-decoration: none;
+
+.social-icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
-.kakao-1 {
-    flex-shrink: 0;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    object-fit: cover;
+
+.google-button {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
 }
-.naver {
-    background: #03c75a;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #03c75a;
-    border-width: 1px;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 48px;
-    position: relative;
-    text-decoration: none;
+
+.google-button img {
+    width: 24px;
+    height: 24px;
 }
-.btn-g-icon-square-1 {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    object-fit: cover;
+
+.kakao-button {
+    background-color: #fee500;
+    color: black;
 }
-.label-23 {
-    color: #ffffff;
-    text-align: left;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    position: relative;
-    width: 187.26px;
-    height: 28.84px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+
+.kakao-button img {
+    width: 24px;
+    height: 24px;
 }
-.divider {
-    display: flex;
-    flex-direction: row;
-    gap: 23px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
+
+.naver-button {
+    background-color: #03c75a;
+    color: white;
 }
-.divider-2 {
-    border-radius: 0px;
-    flex-shrink: 0;
-    width: 219.6px;
-    height: 2.42px;
-    position: relative;
-    overflow: visible;
+
+.naver-button img {
+    width: 26px;
+    height: 26px;
 }
-.or {
-    color: #000000;
-    text-align: center;
-    font-family: "Inter-Regular", sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    position: relative;
-    width: 283.2px;
-    height: 32.67px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
 }
-.divider-3 {
-    border-radius: 0px;
-    flex-shrink: 0;
-    width: 219.6px;
-    height: 2.42px;
-    position: relative;
-    overflow: visible;
+
+.signup-link a {
+    color: #3f51b5;
 }
-.to-signup {
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #111111;
-    border-width: 1px;
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 76.22px;
-    position: relative;
-    text-decoration: none;
+
+/* 반응형 스타일 */
+/* 데스크탑(Desktop): 1200px 이상 */
+@media (min-width: 1200px) {
+    .login-container {
+        max-width: 500px;
+    }
 }
-.sign-up-2 {
-    text-align: center;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* 노트북(Laptop): 992px ~ 1199px */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .login-container {
+        max-width: 400px;
+    }
+
+    .login-input,
+    .login-button {
+        padding: 12px;
+        font-size: 14px;
+    }
 }
-.sign-up-2-span {
-    color: #111111;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+
+/* 태블릿(Tablet): 768px ~ 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+    .login-container {
+        max-width: 90%;
+    }
+
+    .login-input,
+    .login-button {
+        padding: 10px;
+        font-size: 14px;
+    }
 }
-.sign-up-2-span2 {
-    color: #403cf2;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-}
-.sign-up-2-span3 {
-    color: #111111;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+
+/* 모바일(Mobile): 767px 이하 */
+@media (max-width: 767px) {
+    .login-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .login-input,
+    .login-button {
+        padding: 8px;
+        font-size: 12px;
+    }
 }
