@@ -13,46 +13,6 @@
     display: flex;
 
 }
-
-.home-main-logo {
-    width: 170px;
-    height: auto;
-    object-fit: contain;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-@media (max-width: 768px) {
-    .home-navi {
-        height: auto; /* Height will adjust automatically */
-        padding: 20px 0; /* Additional padding for small screens */
-        flex-direction: column; /* 세로로 정렬 */
-        align-items: center; /* 가운데 정렬 */
-    }
-
-    .home-left-side, .home-right-side {
-        flex: none; /* 기본 크기 유지 */
-        gap: 20px; /* 요소 간격 */
-        width: 100%; /* 너비 100% */
-        justify-content: center; /* 가운데 정렬 */
-    }
-
-    .home-left-side-text, .home-right-side-text {
-        font-size: 14px; /* 폰트 크기 조정 */
-        padding: 8px 16px; /* 내부 여백 조정 */
-    }
-
-    .home-main-logo {
-        margin: 10px 0; /* 로고의 상하 여백 조정 */
-        position: relative; /* 위치 설정 초기화 */
-        left: auto; /* 좌표 초기화 */
-        transform: none; /* 변환 초기화 */
-    }
-}
-
-
-
 .home-content {
     padding: 0px 0px 80px 0px;
     display: flex;
@@ -65,534 +25,142 @@
     left: calc(50% - 570px);
     top: 160px;
 }
-.home-primary-content {
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 444px;
-    position: relative;
-    overflow: hidden;
-}
-.home-primary-content-main {
+.time-middle {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    justify-content: flex-start;
-    width: 730px;
-    position: absolute;
-    left: calc(50% - 365px);
-    top: 0px;
-}
-.home-primary-content-description {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 398px;
-    position: relative;
-}
-.home-primary-content-title {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
+    gap: 12px;
     align-items: center;
     justify-content: flex-start;
     align-self: stretch;
     flex-shrink: 0;
     position: relative;
+    transition: opacity 0.3s ease-in-out;
 }
-.home-primary-content-title-main {
-    color: #000000;
-    text-align: center;
-    font-family: "NotoSans-Bold", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    position: relative;
-    white-space: nowrap;
+.time-middle.active {
+    animation: slide-in 0.5s ease-out forwards; /* 0.5초 동안 ease-out 가속도로 slide-in 애니메이션 적용 */
 }
-.home-primary-content-title-sub {
-    color: #000000;
-    text-align: left;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    position: relative;
-    white-space: nowrap;
+.time-middle.inactive {
+    animation: slide-out 0.5s ease-out forwards; /* 비활성화 상태일 때 opacity를 0으로 설정하여 페이드 아웃 */
 }
-.home-primary-content-time {
+@keyframes slide-in {
+    0% { transform: translateX(100%); } /* 시작 위치 설정 */
+    100% { transform: translateX(0); } /* 최종 위치 설정 */
+}
+@keyframes slide-out {
+    0% { transform: translateX(-100%); } /* 시작 위치 설정 */
+    100% { transform: translateX(0); } /* 최종 위치 설정 */
+}
+.time-middle-title {
     display: flex;
     flex-direction: row;
-    gap: 0px;
-    align-items: flex-end;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-}
-.home-primary-content-time-digit {
-    color: #870f69;
-    text-align: left;
-    font-family: "NotoSans-Bold", sans-serif;
-    font-size: 80px;
-    line-height: 64px;
-    font-weight: 700;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.home-primary-content-time-text {
-    color: #000000;
-    text-align: left;
-    font-family: "NotoSans-Bold", sans-serif;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 700;
-    position: relative;
-}
-.home-primary-content-process {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-.home-process-util {
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 36px;
-    position: relative;
-    overflow: hidden;
-}
-.home-process-name {
-    padding: 0px 8px 0px 8px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    gap: 6px;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0px;
-    top: calc(50% - 11px);
-    overflow: hidden;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
 }
-.home-process-name-text {
-    color: #000000;
-    text-align: left;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+.time-main-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 이미지와 span을 세로 중앙 정렬 */
+    justify-content: center; /* 이미지와 span을 가로 중앙 정렬 */
     position: relative;
 }
-.home-refresh-btn {
-    padding: 0px 8px 0px 8px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
+.time-image-container {
+    position: relative; /* 이미지 컨테이너에 position 설정 */
+}
+.time-image {
+    width: 100%; /* 이미지가 컨테이너에 꽉 차게 */
+    height: auto; /* 비율 유지를 위해 auto */
+    display: block; /* inline 요소가 아니라 block 요소로 처리 */
+}
+.time-time-container {
     position: absolute;
-    right: 0px;
-    top: calc(50% - 12px);
-    overflow: hidden;
-    border:none;
+    top: 45%; /* 부모 요소의 상단에서 45% 지점에 배치 */
+    left: 50%; /* 부모 요소의 왼쪽에서 50% 지점에 배치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 transform */
+    display: flex; /* 내부 요소들을 가로로 배치하기 위해 flex 사용 */
+    align-items: center; /* 수직 정렬을 위해 센터 정렬 */
+    color: #000000; /* 텍스트 색상 */
+    font-family: "Inter-Regular", sans-serif; /* 글꼴 */
+    font-size: 80px; /* 텍스트 크기 */
+    font-weight: 400; /* 텍스트 굵기 */
+}
+
+.time-time-span {
+    margin-right: 0px; /* 숫자와 "분" 사이 간격 조정 */
+}
+
+.time-time-span2 {
+    font-size: 48px; /* "분" 텍스트 크기 */
+    font-weight: 400; /* "분" 텍스트 굵기 */
+    text-transform: uppercase; /* 대문자 변환 */
+    /*align-self: flex-end;*/
+    margin-top: 20px;
+}
+.time-move-btn {
+    position: absolute;
+    top: 50%; /* 버튼을 이미지와 텍스트 중앙에 배치 */
+    right: -150px; /* 오른쪽으로 100px 이동 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
     background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
-.home-refresh {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    position: relative;
-    overflow: visible;
-}
-.home-process-images {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-.home-process-1 {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 100px;
-    position: relative;
-}
-.home-process-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-.home-pr-info {
-    background: rgba(232, 234, 246, 0.5);
-    border-radius: 10px 10px 0px 0px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-}
-.home-car-front {
-    width: 48px;
-    height: 48px;
+.time-move-btn2 {
     position: absolute;
-    left: calc(50% - 24px);
-    top: calc(50% - 66px);
-    overflow: visible;
-}
-.home-process-time {
+    top: 50%; /* 버튼을 이미지와 텍스트 중앙에 배치 */
+    left: -150px; /* 오른쪽으로 100px 이동 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
     display: flex;
-    flex-direction: column;
-    gap: 0px;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: calc(50% - 12px);
-    top: calc(50% - -31px);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.home-div2 {
-    color: #000000;
-    width: 40px;
-    text-align: center;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    position: relative;
+.time-move-btn .time-next {
+    width: 72px;
+    height: 72px;
 }
-.home-_7 {
-    color: #000000;
-    text-align: center;
-    font-family: "NotoSans-Bold", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    position: relative;
-}
-.home-pr-name {
-    background: #c5cae9;
-    border-radius: 0px 0px 10px 10px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.home-div3 {
-    color: #ffffff;
-    text-align: center;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    position: absolute;
-    left: calc(50% - 43px);
-    top: calc(50% - 10px);
-}
-.home-process-2 {
+.time-btn-frame {
     display: flex;
-    flex-direction: row;
-    gap: 2px;
+    gap: 6px;
     align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-}
-.home-process-info2 {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 100px;
-    position: relative;
-}
-.home-pr-info2 {
-    background: rgba(232, 234, 246, 0.5);
-    border-radius: 10px 0px 0px 0px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-}
-.home-user-check-01 {
-    width: 48px;
-    height: 48px;
+    justify-content: flex-end; /* 오른쪽 정렬 */
     position: absolute;
-    left: calc(50% - 24px);
-    top: calc(50% - 66px);
-    overflow: visible;
+    bottom: 0px; /* 아래에서부터 10px 떨어진 위치로 조정 */
+    right: 0px; /* 오른쪽에서부터 10px 떨어진 위치로 조정 */
+    width: 150px; /* 원하는 너비로 조정 */
+    border :none;
+    background-color: #ffffff;
+    cursor :pointer;
 }
-.home-pr-name2 {
-    background: #9fa8da;
-    border-radius: 0px 0px 0px 10px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.home-div4 {
-    color: #ffffff;
+.time-btn-text {
+    color: #5d5d5d;
     text-align: center;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    position: absolute;
-    left: calc(50% - 34px);
-    top: calc(50% - 10px);
-}
-.home-pr-info3 {
-    background: rgba(232, 234, 246, 0.5);
-    border-radius: 0px 10px 0px 0px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-}
-.home-luggage-01 {
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    left: calc(50% - 24px);
-    top: calc(50% - 66px);
-    overflow: visible;
-}
-.home-pr-name3 {
-    background: #9fa8da;
-    border-radius: 0px 0px 10px 0px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.home-div5 {
-    color: #ffffff;
-    text-align: center;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    position: absolute;
-    left: calc(50% - 33px);
-    top: calc(50% - 10px);
-}
-.home-process-3 {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-}
-.home-group-account {
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    left: calc(50% - 24px);
-    top: calc(50% - 66px);
-    overflow: visible;
-}
-.home-pr-name4 {
-    background: #7986cb;
-    border-radius: 0px 0px 0px 10px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.home-div6 {
-    color: #ffffff;
-    text-align: center;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-}
-.home-pr-info4 {
-    background: rgba(232, 234, 246, 0.5);
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-}
-.home-police {
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    left: calc(50% - 24px);
-    top: calc(50% - 66px);
-    overflow: visible;
-}
-.home-pr-name5 {
-    background: #7986cb;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.home-passport {
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    left: calc(50% - 24px);
-    top: calc(50% - 66px);
-    overflow: visible;
-}
-.home-pr-name6 {
-    background: #7986cb;
-    border-radius: 0px 0px 10px 0px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.home-process-4 {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-}
-.home-departure {
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    left: calc(50% - 24px);
-    top: calc(50% - 66px);
-    overflow: visible;
-}
-
-.home-frame-595 {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: calc(50% - 21px); /* 가로 중앙 정렬 */
-    top: calc(50% - -28px); /* 세로 중앙 정렬 */
-    /*transform: translate(-50%, -50%); !* 부모 요소의 중앙 정렬 *!*/
-
-}
-
-.home-_20 {
-    color: #000000;
-    text-align: center;
-    font-family: "NotoSans-Bold", sans-serif;
+    font-family: "NotoSans-DisplayLight", sans-serif;
     font-size: 16px;
-    font-weight: 700;
-    position: relative;
-}
-.home-pr-name7 {
-    background: #5c6bc0;
-    border-radius: 0px 0px 10px 10px;
-    align-self: stretch;
-    flex-shrink: 0;
-    height: 40px;
-    position: relative;
-    overflow: hidden;
-}
-.home-div7 {
-    color: #ffffff;
-    text-align: left;
-    font-family: "NotoSans-DisplayRegular", sans-serif;
-    font-size: 14px;
     font-weight: 400;
-    position: absolute;
-    left: calc(50% - 13px);
-    top: calc(50% - 10px);
+    position: relative;
 }
-.home-pred-time {
-    position: absolute;
-    inset: 0;
-}
-.home-time-3 {
-    background: #5c6bc0;
-    border-radius: 10px;
-    width: 60px;
-    height: 24px;
-    position: absolute;
-    left: 388px;
-    top: 364px;
-    overflow: hidden;
-}
-.home-time-3-text {
-    color: #ffffff;
-    text-align: left;
-    font-family: "NotoSans-Bold", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    position: absolute;
-    left: calc(50% - 17px);
-    top: calc(50% - 11px);
-}
-.home-time-2 {
-    background: #5c6bc0;
-    border-radius: 10px;
-    width: 60px;
-    height: 24px;
-    position: absolute;
-    left: 598px;
-    top: 364px;
-    overflow: hidden;
-}
-.home-time-2-text {
-    color: #ffffff;
-    text-align: left;
-    font-family: "NotoSans-Bold", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    position: absolute;
-    left: calc(50% - 17px);
-    top: calc(50% - 11px);
-}
-
-.home-time-1 {
-    background: #5c6bc0;
-    border-radius: 10px;
-    width: 60px;
-    height: 24px;
-    position: absolute;
-    left: 698px;
-    top: 364px;
-    overflow: hidden;
-}
-
-.home-time-text {
-    color: #ffffff;
-    text-align: center;
-    font-family: "NotoSans-Bold", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
+.time-refresh {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    overflow: visible;
 }
 .home-sub-content-1 {
     display: flex;
@@ -630,6 +198,7 @@
     font-weight: 300;
     position: relative;
 }
+
 .home-sub-content-1-main {
     display: flex;
     flex-direction: column;
@@ -714,60 +283,7 @@
     top: 4px;
     overflow: visible;
 }
-.home-sub-content-1-container-text-2 {
-    color: #000000;
-    text-align: left;
-    font-family: "NotoSans-Light", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    position: absolute;
-    left: 0px;
-    top: 3.5px;
-}
-.home-arrow-narrow-right2 {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    overflow: visible;
-}
-.home-sub-content-1-container-text-3 {
-    color: #000000;
-    text-align: left;
-    font-family: "NotoSans-Light", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    position: absolute;
-    left: 0px;
-    top: 3.5px;
-}
-.home-arrow-narrow-right3 {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    overflow: visible;
-}
-.home-sub-content-1-container-text-4 {
-    color: #000000;
-    text-align: left;
-    font-family: "NotoSans-Light", sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    position: absolute;
-    left: 0px;
-    top: 3.5px;
-}
-.home-arrow-narrow-right4 {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    overflow: visible;
-}
+
 .home-sub-content-2 {
     display: flex;
     flex-direction: column;
@@ -942,40 +458,7 @@
     overflow: hidden;
     object-fit: cover;
 }
-.home-bell2 {
-    width: 60.59%;
-    height: 69.27%;
-    position: absolute;
-    right: 19.09%;
-    left: 20.31%;
-    bottom: 15.11%;
-    top: 15.62%;
-    overflow: visible;
-}
-.home-dots-vertical2 {
-    flex-shrink: 0;
-    width: 12px;
-    height: 12px;
-    position: relative;
-    overflow: visible;
-}
-.home-bell3 {
-    width: 60.59%;
-    height: 69.27%;
-    position: absolute;
-    right: 19.09%;
-    left: 20.31%;
-    bottom: 15.11%;
-    top: 15.62%;
-    overflow: visible;
-}
-.home-dots-vertical3 {
-    flex-shrink: 0;
-    width: 12px;
-    height: 12px;
-    position: relative;
-    overflow: visible;
-}
+
 .home-sub-content-2-bottom {
     display: flex;
     flex-direction: row;
@@ -1038,20 +521,7 @@
     position: relative;
     overflow: visible;
 }
-.home-arrow-narrow-right6 {
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    overflow: visible;
-}
-.home-arrow-narrow-right7 {
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    overflow: visible;
-}
+
 .home-footer {
     background: #f5f5f5;
     width: 1920px;

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/ServiceIntro.css';
-import {Link} from "react-router-dom";
 import NavigationBar from '../components/NavigationBar';
 
 
@@ -42,7 +41,7 @@ function ServiceIntro(){
                                     </div>
                                 </div>
                                 <div className="serviceintro-content-container">
-                                    <img className="serviceintro-image-icon2" src="/images/circle(temp).png"/>
+                                    <img className="serviceintro-image-icon" src="/images/circle(temp).png"/>
                                     <div className="serviceintro-content-title">반입물품안내</div>
                                     <div className="serviceintro-content-explain">
                                         We Keep Your Web build Online 24x7x365.
@@ -52,7 +51,7 @@ function ServiceIntro(){
                                     </div>
                                 </div>
                                 <div className="serviceintro-content-container">
-                                    <img className="serviceintro-image-icon3" src="/images/circle(temp).png"/>
+                                    <img className="serviceintro-image-icon" src="/images/circle(temp).png"/>
                                     <div className="serviceintro-content-title">분실물찾기</div>
                                     <div className="serviceintro-content-explain">
                                         We Keep Your Web build Online 24x7x365.
@@ -67,7 +66,7 @@ function ServiceIntro(){
                             <div className="serviceintro-bottom-2-part-title">직원 서비스</div>
                             <div className="serviceintro-bottom-2-part-content">
                                 <div className="serviceintro-content-container">
-                                    <img className="serviceintro-image-icon4" src="/images/circle(temp).png"/>
+                                    <img className="serviceintro-image-icon" src="/images/circle(temp).png"/>
                                     <div className="serviceintro-content-title">분실물찾기</div>
                                     <div className="serviceintro-content-explain">
                                         We Keep Your Web build Online 24x7x365.
@@ -77,7 +76,7 @@ function ServiceIntro(){
                                     </div>
                                 </div>
                                 <div className="serviceintro-content-container">
-                                    <img className="serviceintro-image-icon5" src="/images/circle(temp).png"/>
+                                    <img className="serviceintro-image-icon" src="/images/circle(temp).png"/>
                                     <div className="serviceintro-content-title">분실물찾기</div>
                                     <div className="serviceintro-content-explain">
                                         We Keep Your Web build Online 24x7x365.

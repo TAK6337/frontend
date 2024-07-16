@@ -175,13 +175,13 @@ function Home() {
                             </a>
                             <Link to='/Time' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
-                                    <div className="home-sub-content-1-container-text-2">수속시간안내</div>
+                                    <div className="home-sub-content-1-container-text-1">수속시간안내</div>
                                     <div className="home-sub-content-1-container-right">
                                         <img className="home-sub-content-1-container-image"
                                              src="/images/main_sub_ticket.png"/>
                                         <div className="home-arrow-box">
                                             <img
-                                                className="home-arrow-narrow-right2"
+                                                className="home-arrow-narrow-right"
                                                 src="/images/arrow_narrow_right.png"
                                             />
                                         </div>
@@ -192,13 +192,13 @@ function Home() {
                         <div className="home-sub-content-1-line">
                             <Link to='/' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
-                                    <div className="home-sub-content-1-container-text-3">반입물품안내</div>
+                                    <div className="home-sub-content-1-container-text-1">반입물품안내</div>
                                     <div className="home-sub-content-1-container-right">
                                         <img className="home-sub-content-1-container-image"
                                              src="/images/main_sub_bag.png"/>
                                         <div className="home-arrow-box">
                                             <img
-                                                className="home-arrow-narrow-right3"
+                                                className="home-arrow-narrow-right"
                                                 src="/images/arrow_narrow_right.png"
                                             />
                                         </div>
@@ -207,13 +207,13 @@ function Home() {
                             </Link>
                             <Link to='/' className="home-sub-content-1-container">
                                 <div className="home-sub-content-1-container-description">
-                                    <div className="home-sub-content-1-container-text-4">분실물찾기</div>
+                                    <div className="home-sub-content-1-container-text-1">분실물찾기</div>
                                     <div className="home-sub-content-1-container-right">
                                         <img className="home-sub-content-1-container-image"
                                              src="/images/main_sub_luggage.png"/>
                                         <div className="home-arrow-box">
                                             <img
-                                                className="home-arrow-narrow-right4"
+                                                className="home-arrow-narrow-right"
                                                 src="/images/arrow_narrow_right.png"
                                             />
                                         </div>
@@ -265,14 +265,14 @@ function Home() {
                                         <div className="home-article-top">
                                             <div className="home-article-top-left">
                                                 <div className="home-bell-box">
-                                                    <img className="home-bell2" src="/images/bell.png"/>
+                                                    <img className="home-bell" src="/images/bell.png"/>
                                                 </div>
                                                 <div className="home-broad-text-box">
                                                     <div className="home-broad-text">보도자료</div>
                                                 </div>
                                                 <div className="home-sub-container-2-date">2024.07.15</div>
                                             </div>
-                                            <img className="home-dots-vertical2" src="/images/dots-vertical.png"/>
+                                            <img className="home-dots-vertical" src="/images/dots-vertical.png"/>
                                         </div>
                                         <div className="home-article-title">
                                             [단독] 동북아 허브 꿈꾼다…대구공항,
@@ -294,14 +294,14 @@ function Home() {
                                         <div className="home-article-top">
                                             <div className="home-article-top-left">
                                                 <div className="home-bell-box">
-                                                    <img className="home-bell3" src="/images/bell.png"/>
+                                                    <img className="home-bell" src="/images/bell.png"/>
                                                 </div>
                                                 <div className="home-broad-text-box">
                                                     <div className="home-broad-text">보도자료</div>
                                                 </div>
                                                 <div className="home-sub-container-2-date">2024.07.15</div>
                                             </div>
-                                            <img className="home-dots-vertical3" src="/images/dots-vertical.png"/>
+                                            <img className="home-dots-vertical" src="/images/dots-vertical.png"/>
                                         </div>
                                         <div className="home-article-title">
                                             [단독] 동북아 허브 꿈꾼다…대구공항,
@@ -333,7 +333,7 @@ function Home() {
                                 <div className="home-sub-content-2-text2">보도자료</div>
                                 <Link to='/' className="home-sub-content-2-link">
                                     <div className="home-sub-content-2-link-text">바로가기</div>
-                                    <img className="home-arrow-narrow-right6"
+                                    <img className="home-arrow-narrow-right5"
                                          src="/images/arrow-narrow-right(black).png"/>
                                 </Link>
                             </div>
@@ -343,7 +343,7 @@ function Home() {
                                 <div className="home-sub-content-2-text2">참고자료</div>
                                 <Link to='/' className="home-sub-content-2-link">
                                     <div className="home-sub-content-2-link-text">바로가기</div>
-                                    <img className="home-arrow-narrow-right7"
+                                    <img className="home-arrow-narrow-right5"
                                          src="/images/arrow-narrow-right(black).png"/>
                                 </Link>
                             </div>

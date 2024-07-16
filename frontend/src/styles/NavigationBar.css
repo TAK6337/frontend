@@ -46,3 +46,40 @@
     background-color: #000000; /* 배경색을 검은색으로 변경 */
     color: #ffffff; /* 글자색을 흰색으로 변경 */
 }
+
+.home-main-logo {
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .home-navi {
+        height: auto; /* Height will adjust automatically */
+        padding: 20px 0; /* Additional padding for small screens */
+        flex-direction: column; /* 세로로 정렬 */
+        align-items: center; /* 가운데 정렬 */
+    }
+
+    .home-left-side, .home-right-side {
+        flex: none; /* 기본 크기 유지 */
+        gap: 20px; /* 요소 간격 */
+        width: 100%; /* 너비 100% */
+        justify-content: center; /* 가운데 정렬 */
+    }
+
+    .home-left-side-text, .home-right-side-text {
+        font-size: 14px; /* 폰트 크기 조정 */
+        padding: 8px 16px; /* 내부 여백 조정 */
+    }
+
+    .home-main-logo {
+        margin: 10px 0; /* 로고의 상하 여백 조정 */
+        position: relative; /* 위치 설정 초기화 */
+        left: auto; /* 좌표 초기화 */
+        transform: none; /* 변환 초기화 */
+    }
+}

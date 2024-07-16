@@ -184,20 +184,6 @@
     position: relative;
     width: 252px;
 }
-.serviceintro-image-icon2 {
-    flex-shrink: 0;
-    width: 101px;
-    height: 100px;
-    position: relative;
-    overflow: visible;
-}
-.serviceintro-image-icon3 {
-    flex-shrink: 0;
-    width: 101px;
-    height: 100px;
-    position: relative;
-    overflow: visible;
-}
 .serviceintro-bottom-2-part {
     display: flex;
     flex-direction: column;
@@ -227,17 +213,4 @@
     flex-shrink: 0;
     position: relative;
 }
-.serviceintro-image-icon4 {
-    flex-shrink: 0;
-    width: 101px;
-    height: 100px;
-    position: relative;
-    overflow: visible;
-}
-.serviceintro-image-icon5 {
-    flex-shrink: 0;
-    width: 101px;
-    height: 100px;
-    position: relative;
-    overflow: visible;
-}
+
