@@ -16,89 +16,89 @@ function Taxi(){
         setIsOn2(!isOn2);
     };
     return(
-        <div className="div">
+        <div className="taxi-div">
             <NavigationBar/>
-            <div className="entire">
-                <div className="top">
-                    <div className="subtitle">service monitorling</div>
-                    <div className="title">택시 승강장 관리서비스 실시간 모니터링</div>
-                    <div className="title-explain">
+            <div className="taxi-entire">
+                <div className="taxi-top">
+                    <div className="taxi-subtitle">service monitorling</div>
+                    <div className="taxi-title">택시 승강장 관리서비스 실시간 모니터링</div>
+                    <div className="taxi-title-explain">
                         대기승객 수를 감지해 자동으로 택시를 호출합니다
                     </div>
                 </div>
-                <div className="main">
-                    <div className="middle">
-                        <div className="video-frame">
-                            <div className="live">
-                                <div className="red"></div>
-                                <div className="live-text">Live</div>
+                <div className="taxi-main">
+                    <div className="taxi-middle">
+                        <div className="taxi-video-frame">
+                            <div className="taxi-live">
+                                <div className="taxi-red"></div>
+                                <div className="taxi-live-text">Live</div>
                             </div>
-                            <div className="effect">
-                                <div className="effect-text">Effects : On</div>
+                            <div className="taxi-effect">
+                                <div className="taxi-effect-text">Effects : On</div>
                             </div>
                         </div>
-                        <div className="middle-right">
-                            <div className="waiting">
-                                <div className="waiting-frame">
-                                    <div className="waiting-container">
-                                        <div className="waiting-container-left">
-                                            <div className="waiting-text">대기승객</div>
-                                            <div className="waiting-image">
+                        <div className="taxi-middle-right">
+                            <div className="taxi-waiting">
+                                <div className="taxi-waiting-frame">
+                                    <div className="taxi-waiting-container">
+                                        <div className="taxi-waiting-container-left">
+                                            <div className="taxi-waiting-text">대기승객</div>
+                                            <div className="taxi-waiting-image">
                                                 <div
-                                                    className="user-multiple-group-close-geometric-human-multiple-person-up-user"
+                                                    className="taxi-user-multiple-group-close-geometric-human-multiple-person-up-user"
                                                 >
                                                     <img
-                                                        className="user-multiple-group-close-geometric-human-multiple-person-up-user2"
+                                                        className="taxi-user-multiple-group-close-geometric-human-multiple-person-up-user2"
                                                         src="/images/multi-user.png"
                                                     />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="number">
-                                            <div className="digit">8</div>
-                                            <div className="span">명</div>
+                                        <div className="taxi-number">
+                                            <div className="taxi-digit">8</div>
+                                            <div className="taxi-span">명</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="waiting-frame">
-                                    <div className="waiting-container">
-                                        <div className="waiting-container-left">
-                                            <div className="waiting-text">대기차량</div>
-                                            <div className="waiting-image">
+                                <div className="taxi-waiting-frame">
+                                    <div className="taxi-waiting-container">
+                                        <div className="taxi-waiting-container-left">
+                                            <div className="taxi-waiting-text">대기차량</div>
+                                            <div className="taxi-waiting-image">
                                                 <div
-                                                    className="car-taxi-1-transportation-travel-taxi-transport-cab-car"
+                                                    className="taxi-car-taxi-1-transportation-travel-taxi-transport-cab-car"
                                                 >
                                                     <img
-                                                        className="car-taxi-1-transportation-travel-taxi-transport-cab-car2"
+                                                        className="taxi-car-taxi-1-transportation-travel-taxi-transport-cab-car2"
                                                         src="/images/taxi.png"
                                                     />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="number">
-                                            <div className="digit">8</div>
-                                            <div className="span">대</div>
+                                        <div className="taxi-number">
+                                            <div className="taxi-digit">8</div>
+                                            <div className="taxi-span">대</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="service-container">
-                                <div className="sevice-frame">
-                                    <div className="service">
-                                        <div className="service-text">서비스상태</div>
-                                        <div className="service-condition">정상</div>
+                            <div className="taxi-service-container">
+                                <div className="taxi-sevice-frame">
+                                    <div className="taxi-service">
+                                        <div className="taxi-service-text">서비스상태</div>
+                                        <div className="taxi-service-condition">정상</div>
                                     </div>
-                                    <div className="btn-container">
-                                        <div className="btn-frame">
-                                            <div className="btn-ex">택시호출</div>
-                                            <div className={`slide-btn ${isOn ? 'slide-btn-on' : ''}`} onClick={handleToggle}>
-                                                <div className={`slider ${isOn ? 'slider-on' : ''}`}></div>
+                                    <div className="taxi-btn-container">
+                                        <div className="taxi-btn-frame">
+                                            <div className="taxi-btn-ex">택시호출</div>
+                                            <div className={`taxi-slide-btn ${isOn ? 'taxi-slide-btn-on' : ''}`} onClick={handleToggle}>
+                                                <div className={`taxi-slider ${isOn ? 'taxi-slider-on' : ''}`}></div>
                                             </div>
                                         </div>
-                                        <div className="btn-frame">
-                                            <div className="btn-ex">서비스 작동</div>
-                                            <div className={`slide-btn ${isOn2 ? 'slide-btn-on' : ''}`} onClick={handleToggle2}>
-                                                <div className={`slider ${isOn2 ? 'slider-on' : ''}`}></div>
+                                        <div className="taxi-btn-frame">
+                                            <div className="taxi-btn-ex">서비스 작동</div>
+                                            <div className={`taxi-slide-btn ${isOn2 ? 'taxi-slide-btn-on' : ''}`} onClick={handleToggle2}>
+                                                <div className={`taxi-slider ${isOn2 ? 'taxi-slider-on' : ''}`}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -106,20 +106,20 @@ function Taxi(){
                             </div>
                         </div>
                     </div>
-                    <div className="bottom">
-                        <div className="bottom-frame">
-                            <div className="bottom-title">서비스 기록</div>
-                            <div className="bottom-contents">
-                                <div className="response">
+                    <div className="taxi-bottom">
+                        <div className="taxi-bottom-frame">
+                            <div className="taxi-bottom-title">서비스 기록</div>
+                            <div className="taxi-bottom-contents">
+                                <div className="taxi-response">
                                     15:08 대기승객8명 대기차량8명 자동호출차량0대 서비스상태정상
                                 </div>
-                                <div className="response">
+                                <div className="taxi-response">
                                     15:09 대기승객8명 대기차량8명 자동호출차량0대 서비스상태정상
                                 </div>
-                                <div className="response">
+                                <div className="taxi-response">
                                     15:10 대기승객8명 대기차량8명 자동호출차량0대 서비스상태정상
                                 </div>
-                                <div className="response">
+                                <div className="taxi-response">
                                     15:11 대기승객9명 대기차량8명 자동호출차량1대 서비스상태정상
                                 </div>
                             </div>

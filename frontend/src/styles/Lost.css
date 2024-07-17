@@ -163,7 +163,7 @@
     padding: 6px 12px 6px 12px;
     display: flex;
     flex-direction: row;
-    gap: 122px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
@@ -216,7 +216,7 @@
     padding: 6px 12px 6px 12px;
     display: flex;
     flex-direction: row;
-    gap: 122px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
@@ -241,6 +241,18 @@
     position: relative;
     overflow: visible;
 }
+.calendar-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000; /* 다른 요소 위에 오도록 z-index 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
 .lost-cate {
     background: #ffffff;
     border-radius: 10px;
@@ -360,6 +372,7 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 .lost-to-police-btn-text {
     color: #000000;
@@ -924,6 +937,7 @@
     height: 16px;
     position: relative;
     overflow: visible;
+    cursor: pointer;
 }
 .chevron-left {
     flex-shrink: 0;
@@ -931,6 +945,7 @@
     height: 16px;
     position: relative;
     overflow: visible;
+    cursor: pointer;
 }
 .frame-965 {
     background: #3f51b5;
@@ -944,6 +959,7 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    cursor:pointer;
 }
 ._1 {
     color: #ffffff;
@@ -969,6 +985,7 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    cursor:pointer;
 }
 ._2 {
     color: #adadad;
@@ -994,6 +1011,7 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    cursor:pointer;
 }
 ._3 {
     color: #adadad;
@@ -1019,6 +1037,7 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    cursor:pointer;
 }
 ._4 {
     color: #adadad;
@@ -1044,6 +1063,7 @@
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    cursor:pointer;
 }
 ._5 {
     color: #adadad;
@@ -1070,6 +1090,7 @@
     height: 16px;
     position: relative;
     overflow: visible;
+    cursor: pointer;
 }
 .chevron-right-double {
     flex-shrink: 0;
@@ -1077,4 +1098,41 @@
     height: 16px;
     position: relative;
     overflow: visible;
+    cursor: pointer;
+}
+
+.page-button {
+    display: inline-block;
+    border-radius: 45px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.page-number {
+    color: black; /* Set the color of the number */
+}
+
+.page-button.active-page {
+    background-color: #3f51b5; /* Example active page background color */
+}
+
+.active-page {
+    color: white; /* Example active page number color */
+}
+.page-button:hover {
+    background-color: #ffffff;
+}
+.ellipsis {
+    color: #999; /* 회색으로 표시 */
+    padding: 5px 10px;
+    cursor: default; /* 포인터 제거 */
 }
