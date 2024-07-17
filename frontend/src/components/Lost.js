@@ -1,4 +1,4 @@
-import React, { useState, use } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../styles/Lost.css';
 import NavigationBar from "./NavigationBar";
 import Calendar from 'react-calendar'; // react-calendar 라이브러리 import
@@ -7,154 +7,52 @@ function Lost() {
     const itemsPerPage = 10;
     const [currentPage, setCurrentPage] = useState(1);
     const items = [
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
-        { category: '동물', name: '삼색 냥이', place: '옆집', date: '240717', status: '보관중' },
-        { category: '동물', name: '강아지', place: '옆집', date: '240717', status: '반환완료' },
-        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '200217', status: '경찰청 이관' },
+        { category: '동물', name: '삼색 냥이', place: '옆집', date: '2024-07-15', status: '보관중' },
+        { category: '동물', name: '강아지', place: '옆집', date: '2024-07-16', status: '반환완료' },
+        { category: '기타', name: '오래된 분실물', place: '분실물센터앞', date: '2024-07-14', status: '경찰청 이관' },
+        { category: '기타', name: '분실 스마트폰', place: '카페', date: '2024-07-17', status: '보관중' },
+        { category: '가방', name: '검정색 백팩', place: '도서관', date: '2024-07-18', status: '보관중' },
+        { category: '가방', name: '분실 레드 가방', place: '공원', date: '2024-07-19', status: '보관중' },
+        { category: '가방', name: '회색 쇼퍼백', place: '마트', date: '2024-07-20', status: '보관중' },
+        { category: '모자', name: '분실 화이트 캡', place: '체육관', date: '2024-07-21', status: '보관중' },
+        { category: '모자', name: '블랙 헬멧', place: '서핑장', date: '2024-07-22', status: '보관중' },
+        { category: '모자', name: '스트로포모자', place: '해변', date: '2024-07-23', status: '보관중' },
+        { category: '서류', name: '주민등록증', place: '사무실', date: '2024-07-24', status: '보관중' },
+        { category: '서류', name: '운전면허증', place: '차량', date: '2024-07-25', status: '보관중' },
+        { category: '서류', name: '학생증', place: '학교', date: '2024-07-26', status: '보관중' },
+        { category: '전자기기', name: '아이폰', place: '카페', date: '2024-07-27', status: '보관중' },
+        { category: '전자기기', name: '갤럭시 태블릿', place: '도서관', date: '2024-07-28', status: '보관중' },
         // 추가 항목들...
     ];
 
-    const totalPages = Math.ceil(items.length / itemsPerPage);
+
+
 
     const handlePrevPage = () => {
         setCurrentPage((prev) => Math.max(prev - 1, 1));
     };
 
     const handleNextPage = () => {
-        setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+        setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages));
     };
     const handleLastPage = () => {
+        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
         setCurrentPage(totalPages);
     };
     const handleFirstPage = () => {
         setCurrentPage(1);
     };
 
-    const displayedItems = items.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
-    );
+
     const getPageNumbers = () => {
+        const totalItems = filteredItems.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        const maxVisiblePages = 5;
         const pageNumbers = [];
-        const maxVisiblePages = 5; // Maximum number of visible page buttons
 
-        if (totalPages <= maxVisiblePages) {
-            for (let i = 1; i <= totalPages; i++) {
-                pageNumbers.push(i);
-            }
-        } else {
-            let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-            let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-
-            if (startPage > 1) {
-                pageNumbers.push(1);
-                if (startPage > 2) {
-                    pageNumbers.push('...');
-                }
-            }
-
-            for (let i = startPage; i <= endPage; i++) {
-                pageNumbers.push(i);
-            }
-
-            if (endPage < totalPages) {
-                if (endPage < totalPages - 1) {
-                    pageNumbers.push('...');
-                }
-                pageNumbers.push(totalPages);
-            }
+        for (let i = 1; i <= Math.min(totalPages, maxVisiblePages); i++) {
+            pageNumbers.push(i);
         }
 
         return pageNumbers;
@@ -164,11 +62,27 @@ function Lost() {
     };
 
 
-    const [startDate, setStartDate] = useState(new Date()); // 시작 날짜 상태
-    const [endDate, setEndDate] = useState(new Date()); // 종료 날짜 상태
+    const [startDate, setStartDate] = useState(null); // 시작 날짜 상태
+    const [endDate, setEndDate] = useState(null); // 종료 날짜 상태
     const [showStartDateCalendar, setShowStartDateCalendar] = useState(false); // 시작 날짜 달력 표시 여부 상태
     const [showEndDateCalendar, setShowEndDateCalendar] = useState(false); // 종료 날짜 달력 표시 여부 상태
 
+    const calendarRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (calendarRef.current && !calendarRef.current.contains(event.target)) {
+                setShowStartDateCalendar(false);
+                setShowEndDateCalendar(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
     const handleStartDateChange = (date) => {
         setStartDate(date); // 시작 날짜 업데이트
         setShowStartDateCalendar(false); // 시작 날짜 달력 숨기기
@@ -180,11 +94,51 @@ function Lost() {
     };
 
     const handleEndDateCalendarClick = () => {
-        setShowEndDateCalendar(!showEndDateCalendar); // 달력 표시 여부 토글
+        setShowEndDateCalendar(!showEndDateCalendar);
+        setShowStartDateCalendar(false);
     };
-    const handleStartDateChangeClick = () => {
-        setShowStartDateCalendar(!showStartDateCalendar); // 달력 표시 여부 토글
+
+    const handleStartDateCalendarClick = () => {
+        setShowStartDateCalendar(!showStartDateCalendar);
+        setShowEndDateCalendar(false);
     };
+    const [filteredItems, setFilteredItems] = useState(items);
+    const [searchTerm, setSearchTerm] = useState('');
+    const handleSearch = () => {
+        let filtered = items;
+
+        // 아이템 이름 필터링
+        if (searchTerm.trim() !== '') {
+            filtered = filtered.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
+        }
+
+        // 날짜 필터링
+        if (startDate && endDate) {
+            filtered = filtered.filter(item => {
+                const itemDate = new Date(item.date);
+                return itemDate >= startDate && itemDate <= endDate;
+            });
+        }
+        if (searchTerm.trim() === '' && (!startDate || !endDate)) {
+            filtered = items;
+        }
+
+        // 상태 업데이트
+        setFilteredItems(filtered);
+        setCurrentPage(1); // 검색 시 페이지를 첫 페이지로 설정
+    };
+
+
+    // 현재 페이지에 따라 보여질 아이템을 계산합니다.
+    const displayedItems = filteredItems.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
+    const handleResetDates = () => {
+        setStartDate(null);
+        setEndDate(null);
+    };
+
 
     return (
         <div className="lost">
@@ -219,39 +173,55 @@ function Lost() {
                             <div className="lost-date-cate">
                                 <div className="lost-date">
                                     <div className="lost-date-start">
-                                        <div className="lost-date-start-placeholder"
-                                             onClick={() => setShowStartDateCalendar(true)}>
-                                            {startDate.toLocaleDateString()}
+                                        <div
+                                            className="lost-date-start-placeholder"
+
+                                        >
+                                            {startDate ? startDate.toLocaleDateString() : '시작 날짜'}
                                         </div>
-                                        <div className="calendar-frame" onClick={handleStartDateChangeClick}>
+                                        <div className="calendar-frame" onClick={handleStartDateCalendarClick}>
                                             <img className="calendar2" src="/images/calendar.png" alt="calendar"/>
                                         </div>
-                                        {showStartDateCalendar && (
-                                            <div className="calendar-popup">
-                                                <Calendar onChange={handleStartDateChange} value={startDate}/>
-                                            </div>
-                                        )}
+
                                     </div>
+                                    {showStartDateCalendar && (
+                                        <div className="calendar-popup" ref={calendarRef}>
+                                            <Calendar onChange={handleStartDateChange} value={startDate}/>
+                                        </div>
+                                    )}
                                     <div className="lost-date-ing">~</div>
                                     <div className="lost-date-end">
-                                        <div className="lost-date-end-placeholder">
-                                        {endDate.toLocaleDateString()}
+                                        <div
+                                            className="lost-date-end-placeholder"
+
+                                        >
+                                            {endDate ? endDate.toLocaleDateString() : '종료 날짜'}
                                         </div>
                                         <div className="calendar-frame" onClick={handleEndDateCalendarClick}>
                                             <img className="calendar2" src="/images/calendar.png" alt="calendar"/>
                                         </div>
-                                        {showEndDateCalendar && (
-                                            <div className="calendar-popup">
-                                                <Calendar onChange={handleEndDateChange} value={endDate}/>
-                                            </div>
-                                        )}
+
                                     </div>
+                                    {showEndDateCalendar && (
+                                        <div className="calendar-popup" ref={calendarRef}>
+                                            <Calendar onChange={handleEndDateChange} value={endDate}/>
+                                        </div>
+                                    )}
+                                    <button className="calendar-refresh" onClick={handleResetDates}>
+                                        <img src="/images/refresh.png"/>
+                                    </button>
                                 </div>
                                 <div className="lost-cate">
-                                    <div className="lost-cate-placeholder">습득물</div>
-                                    <div className="search-frame">
-                                        <div className="search">search</div>
-                                    </div>
+                                    <input
+                                        type="text"
+                                        className="lost-cate-placeholder"
+                                        placeholder="습득물"
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                    />
+                                    <button className="search-frame" onClick={handleSearch}>
+                                        <img className="search" src="/images/search.png" alt="Search" />
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +241,7 @@ function Lost() {
                                 </span>
                             </span>
                         </div>
-                        <a href = 'https://www.lost112.go.kr/' className="lost-to-police-btn">
+                        <a href='https://www.lost112.go.kr/' className="lost-to-police-btn">
                             <div className="lost-to-police-btn-text">
                                 경찰청 유실물 통합포털 바로가기
                             </div>
