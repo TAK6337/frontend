@@ -9,7 +9,7 @@ function NavigationBar() {
             <div className="home-left-side">
                 <Link to='/ServiceIntro' className="home-left-side-text">서비스소개</Link>
                 <Link to='/Procedure' className="home-left-side-text">수속과정안내</Link>
-                <Link to='/' className="home-left-side-text">반입물품안내</Link>
+                <Link to='/Items' className="home-left-side-text">반입물품안내</Link>
                 <Link to='/' className="home-left-side-text">분실물찾기</Link>
             </div>
             <a href='/' className='main-logo'>
