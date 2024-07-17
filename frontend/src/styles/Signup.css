@@ -53,6 +53,7 @@
     display: flex;
     width: 100%; /* 전체 가로 너비 */
     align-items: center; /* 입력 박스와 버튼을 세로 가운데 정렬 */
+    margin-bottom: 5px;
 }
 
 .signup-input {
@@ -87,6 +88,10 @@
     align-self: flex-start; /* 오른쪽 정렬 */
     width: 40%;
 }
+
+.availability-button:hover {
+    background-color: #0056b3;
+    }
 
 .error-message {
     color: red;

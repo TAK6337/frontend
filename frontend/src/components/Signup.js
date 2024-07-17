@@ -136,17 +136,21 @@ const Signup = ({agreed}) => {
 
                     <div className="form-group">
                         <label className="input-label">이메일 입력</label>
-                        <input
-                            type="text"
-                            placeholder="이메일을 입력해주세요."
-                            className="signup-input"
-                            value={email}
-                            onChange={handleEmailChange}
-                            onBlur={handleEmailBlur}
-                        />
+                        <div className="input-button-container">
+                            <input
+                                type="text"
+                                placeholder="이메일을 입력해주세요."
+                                className="signup-input"
+                                value={email}
+                                onChange={handleEmailChange}
+                                onBlur={handleEmailBlur}
+                            />
+                            <button type="button" className="availability-button">이메일 인증</button>
+                        </div>
                         <div className="error-message-container">
                             {emailError && <p className="error-message">{emailError}</p>}
                         </div>
+
                     </div>
 
                     <div className="form-group">
@@ -213,7 +217,7 @@ const Signup = ({agreed}) => {
                                 onChange={handlePhoneChange}
                                 onBlur={handlePhoneBlur}
                             />
-                            <button type="button" className="availability-button">본인인증</button>
+                            <button type="button" className="availability-button">전화번호 인증</button>
                         </div>
                         <div className="error-message-container">
                             {phoneError && <p className="error-message">{phoneError}</p>}

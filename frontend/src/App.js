@@ -8,6 +8,8 @@ import ServiceIntro from "./components/ServiceIntro";
 import Procedure from "./components/Procedure";
 import Taxi from "./components/Taxi"
 
+import Items from "./components/Items";
+
 function App() {
     const [agreed, setAgreed] = useState(false);
   return (
@@ -19,6 +21,7 @@ function App() {
               <Route path="/PrivacyAgreement" element={<PrivacyAgreement setAgreed={setAgreed} />} />
               <Route path="/ServiceIntro" element={<ServiceIntro/>} />
               <Route path="/procedure" element={<Procedure/>} />
+              <Route path="/Items" element={<Items/>} />
               <Route path="/Taxi" element={<Taxi/>} />
           </Routes>
       </Router>
