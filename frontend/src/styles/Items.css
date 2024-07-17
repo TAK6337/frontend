@@ -1,9 +1,13 @@
-/* Items.css */
+.items-container,
+.items-container * {
+    box-sizing: border-box;
+}
+
 .items-container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0 auto 10px auto;
+    padding: 10px;
 }
 
 .items-header {
@@ -25,17 +29,26 @@
 .items-info-button {
     background-color: #3f51b5;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px; /* padding 값을 더 크게 설정 */
+    font-size: 1.3rem; /* font-size 값을 더 크게 설정 */
+    font-weight: bold; /* 텍스트를 굵게 설정 */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
 }
+.items-info-image {
+    width: 28px; /* 이미지 크기 설정 */
+    height: 28px;
+    margin-left: 13px; /* 텍스트와 이미지 사이의 간격 설정 */
+    margin-bottom: 3px;
+    vertical-align: middle;
+}
 
 .items-nav {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .items-nav-list {
@@ -46,9 +59,11 @@
 
 .items-nav-item {
     margin: 0 10px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     cursor: pointer;
     border-bottom: 2px solid transparent;
+    font-weight: 600; /* 글자 굵기 설정 */
+    white-space: nowrap; /* 줄바꿈 방지 */
 }
 
 .items-nav-item.items-active {
@@ -62,24 +77,36 @@
 .items-subtitle {
     font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 10px;
+
 }
 
 .items-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
 }
 
 .items-item {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
-    width: 45%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
+.items-item-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
 .items-item-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
@@ -89,4 +116,115 @@
     font-size: 1rem;
     color: #555;
     margin-bottom: 5px;
+}
+/* 추가 및 수정된 CSS 코드 */
+.restricted-container,
+.restricted-container * {
+    box-sizing: border-box;
+}
+
+.restricted-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.restricted-header {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.restricted-list-wrapper {
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.transport-container {
+    display: flex; /* 수평 배치를 위해 flex 속성 추가 */
+    flex-direction: row; /* 요소들을 수평으로 배치 */
+    /*gap: 16px; !* 요소 간의 간격 설정 *!*/
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.transport-header {
+    background: #283593;
+    flex-shrink: 0;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px 2px 0px 0px;
+    width: 570px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 텍스트를 가운데 정렬 */
+    padding-left: 10px; /* 텍스트를 왼쪽으로 약간 이동 */
+}
+
+.detailed-transport-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.detailed-transport-item {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px 2px 2px 0px; 
+    flex-shrink: 0;
+    width: 570px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.detailed-transport-item:last-child {
+    border-right-width: 0px; /* 마지막 항목의 오른쪽 선 추가 */
 }
