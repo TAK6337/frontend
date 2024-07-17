@@ -365,9 +365,37 @@
 }
 .slide-btn {
     flex-shrink: 0;
-    width: 62.34px;
+    background: #cacaca;
+    border-radius: 21.88px;
+    width: 53.59px;
+    height: 19.69px;
+    position: absolute;
+    left: 160px;
+    top: 7.66px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.slide-btn-on {
+    background: #c5cae9;
+}
+.slider {
+    width: 35px;
     height: 35px;
-    position: static;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/*.slider-off {*/
+/*    transform: translateX(0);*/
+/*}*/
+
+.slider-on {
+    background: #5c6bc0;
+    transform: translateX(30px);
 }
 .rectangle-6 {
     background: #cacaca;
