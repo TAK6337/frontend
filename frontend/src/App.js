@@ -6,8 +6,8 @@ import Signup from './components/Signup';
 import PrivacyAgreement from './components/PrivacyAgreement';
 import ServiceIntro from "./components/ServiceIntro";
 import Procedure from "./components/Procedure";
-import Taxi from "./components/Taxi"
-
+import Taxi from "./components/Taxi";
+import Lost from "./components/Lost";
 import Items from "./components/Items";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
               <Route path="/procedure" element={<Procedure/>} />
               <Route path="/Items" element={<Items/>} />
               <Route path="/Taxi" element={<Taxi/>} />
+              <Route path="/Lost" element={<Lost/>} />
           </Routes>
       </Router>
   );
