@@ -5,6 +5,16 @@ import NavigationBar from '../components/NavigationBar';
 import {BabyChangingStation} from "@mui/icons-material";
 
 function Taxi(){
+    const [isOn, setIsOn] = useState(false);
+
+    const handleToggle = () => {
+        setIsOn(!isOn);
+    };
+    const [isOn2, setIsOn2] = useState(false);
+
+    const handleToggle2 = () => {
+        setIsOn2(!isOn2);
+    };
     return(
         <div className="div">
             <NavigationBar/>
@@ -39,7 +49,7 @@ function Taxi(){
                                                 >
                                                     <img
                                                         className="user-multiple-group-close-geometric-human-multiple-person-up-user2"
-                                                        src="user-multiple-group-close-geometric-human-multiple-person-up-user1.svg"
+                                                        src="/images/multi-user.png"
                                                     />
                                                 </div>
                                             </div>
@@ -60,7 +70,7 @@ function Taxi(){
                                                 >
                                                     <img
                                                         className="car-taxi-1-transportation-travel-taxi-transport-cab-car2"
-                                                        src="car-taxi-1-transportation-travel-taxi-transport-cab-car1.svg"
+                                                        src="/images/taxi.png"
                                                     />
                                                 </div>
                                             </div>
@@ -81,16 +91,14 @@ function Taxi(){
                                     <div className="btn-container">
                                         <div className="btn-frame">
                                             <div className="btn-ex">택시호출</div>
-                                            <div className="slide-btn">
-                                                <div className="rectangle-6"></div>
-                                                <div className="ellipse-16"></div>
+                                            <div className={`slide-btn ${isOn ? 'slide-btn-on' : ''}`} onClick={handleToggle}>
+                                                <div className={`slider ${isOn ? 'slider-on' : ''}`}></div>
                                             </div>
                                         </div>
                                         <div className="btn-frame">
                                             <div className="btn-ex">서비스 작동</div>
-                                            <div className="slide-btn">
-                                                <div className="rectangle-7"></div>
-                                                <div className="ellipse-17"></div>
+                                            <div className={`slide-btn ${isOn2 ? 'slide-btn-on' : ''}`} onClick={handleToggle2}>
+                                                <div className={`slider ${isOn2 ? 'slider-on' : ''}`}></div>
                                             </div>
                                         </div>
                                     </div>
