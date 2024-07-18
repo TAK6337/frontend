@@ -146,6 +146,7 @@ function Lost() {
             <div className="lost-content">
                 <div className="lost-top">
                     <div className="lost-top-shadow">
+
                         <div className="lost-top-main">
                             <div className="lost-top-btn-content">
                                 <div className="lost-top-btn-title"># 가장 많이 찾는 분실물 테그</div>

@@ -595,6 +595,7 @@
     align-items: center; /* 세로 중앙 정렬 */
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .frame-947 {
     flex-shrink: 0;
@@ -654,6 +655,7 @@
     position: absolute;
     left: 50%; /* 부모 요소의 중앙 정렬 */
     transform: translateX(-50%); /* 중앙 정렬을 위한 위치 조정 */
+    white-space: nowrap;
 }
 .frame-952 {
     border-style: solid;
